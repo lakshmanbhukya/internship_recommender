@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: internship-recommender
+    env: docker
+    plan: free
+    envVars:
+      - key: LIGHTWEIGHT_MODE
+        value: true
+      - key: PORT
+        value: 8000
+    healthCheckPath: /

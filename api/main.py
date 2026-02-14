@@ -3,7 +3,7 @@ from fastapi.middleware.cors import CORSMiddleware
 import logging
 from api.config import settings
 from api.schemas import UserProfile, RecommendationResponse, InternshipResponse, HealthCheck
-from api.hybrid_search import get_engine
+from api.engine_selector import get_search_engine
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
@@ -24,8 +24,8 @@ engine = None
 @app.on_event("startup")
 async def startup_event():
     global engine
-    logger.info("Starting Internship Recommender API v2.0 (Hybrid Search)")
-    engine = get_engine()
+    logger.info("Starting Internship Recommender API v2.0")
+    engine = get_search_engine()
     logger.info("Ready to serve recommendations!")
 
 @app.on_event("shutdown")

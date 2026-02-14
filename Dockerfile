@@ -17,6 +17,9 @@ FROM python:3.10-slim
 
 WORKDIR /app
 
+# Set lightweight mode for 512 MB RAM
+ENV LIGHTWEIGHT_MODE=true
+
 # Copy Python packages from builder
 COPY --from=builder /root/.local /root/.local
 ENV PATH=/root/.local/bin:$PATH
