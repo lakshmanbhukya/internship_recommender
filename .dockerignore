@@ -1,0 +1,56 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+
+# Virtual environments
+venv/
+env/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Git
+.git/
+.gitignore
+
+# Documentation
+*.md
+docs/
+
+# Tests
+tests/
+scripts/test_*.py
+scripts/verify_*.py
+
+# Data (except required files)
+data/raw/
+data/processed/
+data/embeddings_backup.npy
+data/internship_embeddings.npy
+data/internship_metadata.csv
+
+# Notebooks
+notebooks/
+
+# Models (not needed in container)
+models/
+
+# GitHub
+.github/
+
+# Environment
+.env
+
+# Docker
+Dockerfile
+.dockerignore

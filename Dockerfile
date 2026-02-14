@@ -7,16 +7,18 @@ RUN apt-get update && apt-get install -y \
     build-essential \
     && rm -rf /var/lib/apt/lists/*
 
-# Copy requirements
+# Copy and install requirements first (for caching)
 COPY requirements-new.txt requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy application
+# Copy application files
 COPY config/ config/
 COPY api/ api/
-COPY database/ database/
-COPY data/city_distance_matrix.json data/
-COPY data/geocoding_cache.json data/
+COPY database/internships.db database/internships.db
+COPY data/city_distance_matrix.json data/city_distance_matrix.json
+COPY data/geocoding_cache.json data/geocoding_cache.json
+COPY data/faiss_index.bin data/faiss_index.bin
+COPY data/id_mapping.json data/id_mapping.json
 
 # Expose port
 EXPOSE 8000
