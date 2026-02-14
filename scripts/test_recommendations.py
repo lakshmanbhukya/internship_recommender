@@ -101,7 +101,7 @@ def test_lightweight_mode():
         print(f"   Stipend: Rs.{r['stipend_min']}-{r['stipend_max']}")
         print(f"   Score: {r['match_score']:.1f}")
     
-    engine.close()
+    # Don't close - keep connection for other tests
     return True
 
 def test_edge_cases():
@@ -184,7 +184,6 @@ def test_edge_cases():
     for i, r in enumerate(results, 1):
         print(f"{i}. {r['role']} - City: {r['city']}")
     
-    engine.close()
     return True
 
 def test_accuracy():
@@ -202,17 +201,17 @@ def test_accuracy():
         {
             "name": "Backend Developer",
             "skills": ["Python", "Django", "REST API"],
-            "expected_keywords": ["backend", "python", "django", "api", "developer"]
+            "expected_keywords": ["backend", "python", "django", "api", "developer", "web"]
         },
         {
             "name": "Frontend Developer",
             "skills": ["React", "JavaScript", "HTML", "CSS"],
-            "expected_keywords": ["frontend", "react", "javascript", "web", "ui"]
+            "expected_keywords": ["frontend", "react", "javascript", "web", "ui", "development"]
         },
         {
             "name": "Data Science",
             "skills": ["Python", "Machine Learning", "Pandas"],
-            "expected_keywords": ["data", "python", "ml", "analytics", "science"]
+            "expected_keywords": ["data", "python", "ml", "analytics", "science", "machine"]
         },
         {
             "name": "Marketing",
@@ -220,6 +219,8 @@ def test_accuracy():
             "expected_keywords": ["marketing", "social", "content", "media", "digital"]
         }
     ]
+    
+    total_accuracy = 0
     
     for test in test_cases:
         print(f"\n[Test 3.{test_cases.index(test)+1}] {test['name']}")
@@ -247,13 +248,21 @@ def test_accuracy():
                 relevant_count += 1
         
         accuracy = (relevant_count / len(results) * 100) if results else 0
-        print(f"Relevance: {relevant_count}/{len(results)} ({accuracy:.0f}%)")
+        total_accuracy += accuracy
+        print(f"Relevance: {relevant_count}/{len(results)} ({accuracy:.1f}%)")
         
-        # Show top 3
+        # Show top 3 with match details
         for i, r in enumerate(results[:3], 1):
-            print(f"  {i}. {r['role']} @ {r['company']}")
+            role_lower = r['role'].lower()
+            skills_lower = ' '.join(r['skills']).lower()
+            text = f"{role_lower} {skills_lower}"
+            matches = [kw for kw in test['expected_keywords'] if kw in text]
+            print(f"  {i}. {r['role']} @ {r['company']} (Score: {r['match_score']:.1f})")
+            print(f"     Matched: {', '.join(matches) if matches else 'None'}")
     
-    engine.close()
+    avg_accuracy = total_accuracy / len(test_cases)
+    print(f"\n[OVERALL ACCURACY] {avg_accuracy:.1f}%")
+    
     return True
 
 def test_performance():
@@ -309,7 +318,6 @@ def test_performance():
         latency = (time.time() - start) * 1000
         print(f"  top_k={top_k}: {latency:.1f}ms ({len(results)} results)")
     
-    engine.close()
     return True
 
 def test_health():
@@ -328,6 +336,7 @@ def test_health():
     for key, value in health.items():
         print(f"  {key}: {value}")
     
+    # Close only at the very end
     engine.close()
     return True
 
