@@ -1,99 +1,105 @@
-# Internship Recommender System
+# Internship Recommender System v2.0
 
-## Overview
-This project is an intelligent internship recommendation system that matches candidates with suitable internship opportunities based on their skills, education level, preferred sectors, and location. The system uses natural language processing and machine learning techniques to provide personalized recommendations.
+Industry-grade internship recommendation system using semantic search with SQLite vector database.
+
+## Quick Start
+
+```bash
+# 1. Install dependencies
+pip install -r requirements-new.txt
+
+# 2. Setup Kaggle credentials (get from https://www.kaggle.com/settings)
+# Place kaggle.json in C:\Users\<username>\.kaggle\
+
+# 3. Run data pipeline
+python scripts/download_dataset.py
+python scripts/preprocess_data.py
+python models/geocode_cities.py
+
+# 4. Generate embeddings on Google Colab (GPU T4)
+# Upload notebooks/02_embedding_generation.ipynb
+# Download files to data/ folder
+
+# 5. Create database
+python database/create_database.py
+
+# 6. Start API
+python api/main.py
+```
 
 ## Features
-- **Skill-Based Matching**: Uses TF-IDF vectorization and cosine similarity to match candidate skills with internship requirements
-- **Location-Aware Recommendations**: Provides nearby internships based on geographic proximity using the Haversine formula
-- **Education Level Filtering**: Ensures recommendations meet the candidate's education qualifications
-- **Sector-Specific Matching**: Filters internships by preferred industry sectors
-- **Remote Work Options**: Supplements recommendations with remote internships when local options are limited
 
-## Technologies Used
+- **Semantic Search**: BGE-M3 embeddings (1024-dim) for contextual matching
+- **Lightweight**: 35MB SQLite database vs 200MB+ alternatives
+- **Fast**: <100ms search, <5s startup
+- **Production-Ready**: Clean FastAPI architecture
+- **Automated Pipeline**: Kaggle → Preprocessing → Embeddings → Database
 
-### Backend Framework
-- **FastAPI**: High-performance web framework for building APIs with Python
+## API Usage
 
-### Data Processing & Machine Learning
-- **scikit-learn**: Used for TF-IDF vectorization and cosine similarity calculations
-- **pandas & numpy**: For efficient data manipulation and numerical operations
-- **joblib**: For model serialization and persistence
+```bash
+# Health check
+curl http://localhost:8000/
 
-### Geospatial Processing
-- **geopy**: For geocoding city names to coordinates
-- **Haversine Formula**: Custom implementation for accurate distance calculations between coordinates
-
-### Database
-- **MongoDB**: NoSQL database for storing internship data
-- **PyMongo**: Python driver for MongoDB integration
-
-### Environment & Configuration
-- **python-dotenv**: For managing environment variables and configuration
-
-## Technical Architecture
-
-### Recommendation Algorithm
-1. **Data Filtering**: Initial filtering of internships based on sector and education requirements
-2. **Geographic Proximity**: Calculation of distances between candidate location and internship locations
-3. **Text Similarity**: TF-IDF vectorization of skills and job descriptions to calculate similarity scores
-4. **Hybrid Scoring**: Combination of text similarity and distance metrics for final ranking
-5. **Remote Fallback**: Supplementation with remote internships when local options are insufficient
-
-### API Endpoints
-- **/recommend**: POST endpoint that accepts candidate preferences and returns personalized internship recommendations
-
-## Setup and Installation
-
-### Prerequisites
-- Python 3.7+
-- MongoDB instance
-
-### Installation Steps
-1. Clone the repository
-2. Install dependencies:
-   ```
-   pip install -r requirements.txt
-   ```
-3. Create a `.env` file with the following variables:
-   ```
-   MONGO_URI=your_mongodb_connection_string
-   DB_NAME=your_database_name
-   COLLECTION_NAME=your_collection_name
-   ```
-4. Ensure the `tfidf_vectorizer.joblib` file is present in the root directory
-
-### Running the Application
-```
-uvicorn main:app --reload
+# Get recommendations
+curl -X POST http://localhost:8000/recommend \
+  -H "Content-Type: application/json" \
+  -d '{
+    "skills": ["python", "machine learning"],
+    "education": "B.Tech",
+    "city": "Bangalore",
+    "max_distance_km": 50,
+    "min_stipend": 10000
+  }'
 ```
 
-## Usage
-Send a POST request to the `/recommend` endpoint with the following JSON structure:
+## Project Structure
 
-```json
-{
-  "skills": "python, data analysis, machine learning",
-  "sectors": "technology, finance",
-  "education_level": "bachelor",
-  "city_name": "New York",
-  "max_distance_km": 100
-}
+```
+api/                    - FastAPI application
+config/                 - Configuration & settings
+database/               - SQLite database (35MB)
+data/                   - Datasets & embeddings
+models/                 - ML models & geocoding
+scripts/                - Data pipeline scripts
+notebooks/              - Colab notebooks
+docs/migration/         - Migration documentation
 ```
 
-## Response Format
-```json
-{
-  "recommendations": {
-    "nearby_ids": ["id1", "id2", "id3"],
-    "remote_ids": ["id4", "id5"]
-  }
-}
+## Documentation
+
+- **Migration Guide**: [docs/migration/START_HERE.md](docs/migration/START_HERE.md)
+- **API Reference**: [docs/migration/QUICK_REFERENCE.md](docs/migration/QUICK_REFERENCE.md)
+- **Architecture**: [docs/migration/ARCHITECTURE.md](docs/migration/ARCHITECTURE.md)
+- **Old System**: [docs/old_system/README_OLD.md](docs/old_system/README_OLD.md)
+
+## Tech Stack
+
+- FastAPI + Uvicorn
+- sentence-transformers (BGE-M3)
+- SQLite3 + NumPy
+- Pandas + geopy
+- Kaggle API
+
+## Performance
+
+- Database: 35MB
+- Startup: <5 seconds
+- Search: <100ms
+- Memory: ~500MB
+- Records: 8,485 internships
+
+## Deployment
+
+```bash
+# Docker
+docker build -t internship-recommender .
+docker run -p 8000:8000 internship-recommender
+
+# Or deploy to Railway/Render
+# See docs/migration/MIGRATION_GUIDE.md
 ```
 
-## Future Enhancements
-- User authentication and profile management
-- Improved NLP techniques for better skill matching
-- Recommendation feedback and learning system
-- Integration with job application platforms
-- Mobile application interface
+## License
+
+MIT

@@ -29,6 +29,9 @@ wheels/
 pip-log.txt
 pip-delete-this-directory.txt
 
+
+#Amazon Q packages
+.amazonq/
 # Unit test / coverage reports
 htmlcov/
 .tox/
@@ -75,9 +78,30 @@ Thumbs.db
 *.log
 logs/
 
-# Database
-*.db
-*.sqlite3
+# Database (keep internships.db for deployment)
+# *.db
+# *.sqlite3
 
 # FastAPI specific
 .pytest_cache/
+
+# Data files (large)
+data/raw/*.csv
+data/processed/*.csv
+data/*.npy
+data/*.json
+
+# Old system (deprecated)
+chroma/
+vector_store/
+embeddings/
+semantic_recommender/
+resume_parser/
+utils/
+
+# Model cache
+.cache/
+models/
+
+#Ignore vscode AI rules
+.github\instructions\codacy.instructions.md
