@@ -1,15 +1,25 @@
-FROM python:3.10-slim
+# Build stage
+FROM python:3.10-slim AS builder
 
 WORKDIR /app
 
-# Install system dependencies
+# Install build dependencies
 RUN apt-get update && apt-get install -y \
     build-essential \
     && rm -rf /var/lib/apt/lists/*
 
-# Copy and install requirements first (for caching)
-COPY requirements-new.txt requirements.txt
-RUN pip install --no-cache-dir -r requirements.txt
+# Install Python dependencies
+COPY requirements-new.txt .
+RUN pip install --no-cache-dir --user -r requirements-new.txt
+
+# Runtime stage
+FROM python:3.10-slim
+
+WORKDIR /app
+
+# Copy Python packages from builder
+COPY --from=builder /root/.local /root/.local
+ENV PATH=/root/.local/bin:$PATH
 
 # Copy application files
 COPY config/ config/
