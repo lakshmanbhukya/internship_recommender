@@ -1,0 +1,132 @@
+
+============================================================
+INTERNSHIP RECOMMENDATION SYSTEM - TEST SUITE
+============================================================
+
+============================================================
+TEST 1: LIGHTWEIGHT MODE (512 MB)
+============================================================
+[LIGHTWEIGHT] Using lightweight search engine (512 MB mode)
+Loading FAISS index...
+[OK] FAISS index loaded: 8483 vectors
+[OK] ID mapping loaded: 8483 IDs
+[OK] Connected to SQLite DB
+[OK] Lightweight mode - no model loaded
+
+[Test 1.1] Python Developer Search
+Results: 5
+1. Backend Development @ Lawtech
+   Skills: Claude, C Programming, Django
+   Score: 54.0 | Distance: 0.0km
+2. Data Science @ Emoolar Technology Private Limited
+   Skills: Artificial intelligence, CNN (Convolutional Neural Network), Data Science
+   Score: 54.0 | Distance: 0.0km
+3. Marketing @ Arbhu Enterprises Private Limited
+   Skills: Digital Marketing, English Proficiency (Spoken), English Proficiency (Written)
+   Score: 29.0 | Distance: 0.0km
+4. Online Geography Faculty For School Kids. @ Vikalp India Private Limited
+   Skills: Online Teaching
+   Score: 29.0 | Distance: 0.0km
+5. Digital Marketing @ Brand Scale-Up Inc
+   Skills: English Proficiency (Spoken), English Proficiency (Written), Google Sheets
+   Score: 29.0 | Distance: 0.0km
+
+[Test 1.2] Machine Learning Search
+Results: 5
+1. Data Science @ Emoolar Technology Private Limited
+   Score: 45.7
+2. Online Geography Faculty For School Kids. @ Vikalp India Private Limited
+   Score: 29.0
+3. Client Servicing @ ABEC Limited (Asian Business Exhibitions And Conferences)
+   Score: 29.0
+4. Audio Description (Music Background) @ Achieve Point Private Limited
+   Score: 29.0
+5. Fashion Design @ HB Designs Reborn
+   Score: 29.0
+
+[Test 1.3] Marketing Search
+Results: 5
+1. Community Manager @ Aathma Foundation
+   Score: 79.0
+2. Content Writing @ Amita Devnani
+   Score: 69.4
+3. Content Making @ Shyam Sac
+   Score: 54.0
+4. Content Writing @ Outright Systems Private Limited
+   Score: 54.0
+5. Business Development (Sales) @ TheEndorse
+   Score: 54.0
+
+[Test 1.4] Remote Work Search
+Results: 5
+1. Front End Development @ InstaWeb Labs Private Limited (Mumbai)
+   Score: 79.0
+2. React Native Development @ Savant Consulting LLC (Remote)
+   Score: 54.0
+3. Full Stack Development @ Cogent Web Services (Remote)
+   Score: 54.0
+4. Marketing @ Arbhu Enterprises Private Limited (Bangalore)
+   Score: 29.0
+5. Online Geography Faculty For School Kids. @ Vikalp India Private Limited (Remote)
+   Score: 29.0
+
+[Test 1.5] High Stipend Filter (>10000)
+Results: 5
+1. Data Analytics @ Innovexis
+   Stipend: Rs.15000-25000
+   Score: 79.0
+2. Recommendation Systems Engineer (Backend/ML) @ Nutrachoco
+   Stipend: Rs.13000-15000
+   Score: 79.0
+3. Marketing @ Arbhu Enterprises Private Limited
+   Stipend: Rs.15000-25000
+   Score: 29.0
+4. Digital Marketing @ Brand Scale-Up Inc
+   Stipend: Rs.15000-20000
+   Score: 29.0
+5. New Initiative @ Taskify
+   Stipend: Rs.20000-30000
+   Score: 29.0
+
+============================================================
+TEST 2: EDGE CASES
+============================================================
+[LIGHTWEIGHT] Using lightweight search engine (512 MB mode)
+
+[Test 2.1] Single Skill
+
+[FAIL] Edge Cases FAILED: Cannot operate on a closed database.
+
+============================================================
+TEST 3: ACCURACY TESTS
+============================================================
+[LIGHTWEIGHT] Using lightweight search engine (512 MB mode)
+
+[Test 3.1] Backend Developer
+
+[FAIL] Accuracy FAILED: Cannot operate on a closed database.
+
+============================================================
+TEST 4: PERFORMANCE
+============================================================
+[LIGHTWEIGHT] Using lightweight search engine (512 MB mode)
+
+[FAIL] Performance FAILED: Cannot operate on a closed database.
+
+============================================================
+TEST 5: HEALTH CHECK
+============================================================
+[LIGHTWEIGHT] Using lightweight search engine (512 MB mode)
+
+[FAIL] Health Check FAILED: Cannot operate on a closed database.
+
+============================================================
+TEST SUMMARY
+============================================================
+[OK] Lightweight Mode: PASS
+[FAIL] Edge Cases: FAIL
+[FAIL] Accuracy: FAIL
+[FAIL] Performance: FAIL
+[FAIL] Health Check: FAIL
+
+Total: 1/5 tests passed
