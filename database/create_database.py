@@ -74,12 +74,20 @@ def create_database():
     conn.execute("CREATE INDEX IF NOT EXISTS idx_stipend ON internships(stipend_min)")
     conn.execute("CREATE INDEX IF NOT EXISTS idx_freshness ON internships(freshness_score DESC)")
     
+    # Create FTS5 virtual table
+    print("📝 Creating FTS5 full-text search index...")
+    conn.execute("""
+        CREATE VIRTUAL TABLE IF NOT EXISTS fts_internships 
+        USING fts5(id UNINDEXED, profile, skills)
+    """)
+    
     # Insert data
     print("📥 Inserting data...")
     for idx, row in df.iterrows():
         if idx % 1000 == 0:
             print(f"  {idx}/{len(df)} ({idx/len(df)*100:.1f}%)")
         
+        # Insert into main table
         conn.execute("""
             INSERT OR REPLACE INTO internships VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)
         """, (
@@ -98,6 +106,14 @@ def create_database():
             float(row['freshness_score']),
             embeddings[idx].tobytes()
         ))
+        
+        # Insert into FTS5 table
+        skills_list = eval(row['skills_clean']) if isinstance(row['skills_clean'], str) else row['skills_clean']
+        skills_text = ' '.join(skills_list) if isinstance(skills_list, list) else str(skills_list)
+        conn.execute("""
+            INSERT INTO fts_internships(id, profile, skills)
+            VALUES (?, ?, ?)
+        """, (row['internship_id'], row['profile'], skills_text))
     
     conn.commit()
     conn.close()

@@ -1,13 +1,19 @@
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, validator
 from typing import List, Optional
 
 class UserProfile(BaseModel):
-    skills: List[str] = Field(..., min_length=1)
+    skills: List[str] = Field(..., min_length=1, max_length=20)
     education: str
     city: str
     max_distance_km: int = Field(default=50, ge=0, le=500)
     min_stipend: int = Field(default=0, ge=0)
     preferred_sectors: List[str] = Field(default_factory=list)
+    
+    @validator('skills')
+    def validate_skills(cls, v):
+        if not all(len(s.strip()) > 0 for s in v):
+            raise ValueError('Skills cannot be empty strings')
+        return [s.strip() for s in v]
 
 class InternshipResponse(BaseModel):
     id: str

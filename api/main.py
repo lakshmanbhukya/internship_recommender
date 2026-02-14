@@ -1,8 +1,12 @@
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
+import logging
 from api.config import settings
 from api.schemas import UserProfile, RecommendationResponse, InternshipResponse, HealthCheck
-from api.recommendations import RecommendationEngine
+from api.hybrid_search import get_engine
+
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+logger = logging.getLogger(__name__)
 
 app = FastAPI(title=settings.API_TITLE, version=settings.API_VERSION)
 
@@ -20,15 +24,22 @@ engine = None
 @app.on_event("startup")
 async def startup_event():
     global engine
-    print("🚀 Starting Internship Recommender API v2.0")
-    engine = RecommendationEngine()
-    print("✅ Ready to serve recommendations!")
+    logger.info("Starting Internship Recommender API v2.0 (Hybrid Search)")
+    engine = get_engine()
+    logger.info("Ready to serve recommendations!")
+
+@app.on_event("shutdown")
+async def shutdown_event():
+    if engine:
+        engine.close()
+        logger.info("Connections closed")
 
 @app.get("/", response_model=HealthCheck)
 async def health_check():
     if engine is None:
         raise HTTPException(status_code=503, detail="Service starting up")
-    return engine.get_health()
+    health = engine.get_health()
+    return HealthCheck(**health)
 
 @app.post("/recommend", response_model=RecommendationResponse)
 async def recommend(profile: UserProfile):
@@ -36,8 +47,9 @@ async def recommend(profile: UserProfile):
         raise HTTPException(status_code=503, detail="Service not ready")
     
     try:
-        results = engine.recommend(
-            skills=profile.skills,
+        logger.info(f"Request: skills={profile.skills}, city={profile.city}")
+        results = engine.search(
+            user_skills=profile.skills,
             education=profile.education,
             city=profile.city,
             max_distance_km=profile.max_distance_km,
@@ -48,10 +60,10 @@ async def recommend(profile: UserProfile):
         recommendations = [
             InternshipResponse(
                 id=r['id'],
-                role=r['profile'],
+                role=r['role'],
                 company=r['company'],
-                location=r['location_original'],
-                city=r['location_normalized'],
+                location=r['city'],
+                city=r['city'],
                 stipend_min=r['stipend_min'],
                 stipend_max=r['stipend_max'],
                 duration_months=r['duration_months'],
@@ -66,6 +78,7 @@ async def recommend(profile: UserProfile):
             for r in results
         ]
         
+        logger.info(f"Returned {len(recommendations)} recommendations")
         return RecommendationResponse(
             query=profile,
             total_results=len(recommendations),
@@ -74,7 +87,8 @@ async def recommend(profile: UserProfile):
         )
     
     except Exception as e:
-        raise HTTPException(status_code=500, detail=f"Recommendation failed: {str(e)}")
+        logger.error(f"Recommendation failed: {str(e)}", exc_info=True)
+        raise HTTPException(status_code=500, detail="Recommendation service error")
 
 if __name__ == "__main__":
     import uvicorn

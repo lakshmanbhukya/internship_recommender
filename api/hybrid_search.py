@@ -84,8 +84,8 @@ class HybridSearchEngine:
             semantic_score = 1.0 - (dist / 2.0)  # L2 → similarity
             semantic_candidates.append((internship_id, max(0.0, min(1.0, semantic_score))))
         
-        # 3. Lexical search (keyword matching)
-        lexical_candidates = self._keyword_search(" ".join(user_skills), top_k * 5)
+        # 3. Lexical search (FTS5 with BM25)
+        lexical_candidates = self._fts5_search(" ".join(user_skills), top_k * 5)
         
         # 4. Fuse with Reciprocal Rank Fusion (RRF)
         fused = self._fuse_results(semantic_candidates, lexical_candidates)
@@ -109,8 +109,29 @@ Seeking: entry-level internship for students"""
         
         return self.model.encode([text], normalize_embeddings=True)[0]
     
+    def _fts5_search(self, query: str, top_k: int) -> List[Tuple[str, float]]:
+        """Lexical search using SQLite FTS5 with BM25"""
+        try:
+            cursor = self.conn.execute("""
+                SELECT id, bm25(fts_internships) as rank 
+                FROM fts_internships
+                WHERE fts_internships MATCH ?
+                ORDER BY rank
+                LIMIT ?
+            """, (query, top_k))
+            
+            results = []
+            for row in cursor.fetchall():
+                score = 1.0 / (1.0 + abs(row[1]))
+                results.append((row[0], min(1.0, score * 2.0)))
+            
+            return results
+        except:
+            # Fallback to keyword search if FTS5 not available
+            return self._keyword_search(query, top_k)
+    
     def _keyword_search(self, query: str, top_k: int) -> List[Tuple[str, float]]:
-        """Lexical search using keyword matching"""
+        """Fallback keyword search"""
         keywords = query.lower().split()
         
         # Search in profile and skills fields
@@ -243,7 +264,7 @@ Seeking: entry-level internship for students"""
             "faiss_index_loaded": self.index is not None,
             "total_internships": total,
             "vector_count": self.index.ntotal,
-            "search_type": "hybrid (FAISS + keyword matching)"
+            "search_type": "hybrid (FAISS + FTS5 BM25)"
         }
     
     def close(self):
