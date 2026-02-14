@@ -19,6 +19,20 @@ except ImportError:
 
 from api.utils import get_city_distance
 
+# Skill synonyms for better matching
+SKILL_SYNONYMS = {
+    "python": ["python", "python3", "py", "django", "flask", "fastapi"],
+    "javascript": ["javascript", "js", "react", "vue", "angular", "node", "nodejs"],
+    "java": ["java", "spring", "springboot", "hibernate"],
+    "ml": ["machine learning", "ml", "ai", "artificial intelligence", "deep learning", "neural network"],
+    "data science": ["data science", "data analysis", "analytics", "ml", "machine learning"],
+    "backend": ["backend", "server-side", "api", "rest", "database"],
+    "frontend": ["frontend", "ui", "ux", "web", "html", "css"],
+    "mobile": ["mobile", "android", "ios", "react native", "flutter"],
+    "devops": ["devops", "docker", "kubernetes", "ci/cd", "aws", "cloud"],
+    "marketing": ["marketing", "digital marketing", "social media", "seo", "content"],
+}
+
 class LightweightSearchEngine:
     """Memory-efficient search: FAISS + keyword matching (no model)"""
     
@@ -86,8 +100,17 @@ class LightweightSearchEngine:
     
     def _keyword_search(self, query: str, education: str, min_stipend: int, 
                        user_city: str, max_distance_km: int, top_k: int) -> List[Dict]:
-        """Keyword-based search with filters"""
+        """Keyword-based search with filters and synonyms"""
+        # Expand query with synonyms
         keywords = set(query.lower().split())
+        expanded_keywords = set()
+        for kw in keywords:
+            expanded_keywords.add(kw)
+            # Add synonyms
+            for base, synonyms in SKILL_SYNONYMS.items():
+                if kw in synonyms or kw == base:
+                    expanded_keywords.update(synonyms)
+                    break
         
         # Query with filters
         cursor = self.conn.execute("""
@@ -111,20 +134,33 @@ class LightweightSearchEngine:
             if distance_km > max_distance_km:
                 continue
             
-            # Calculate keyword match score
-            text = f"{profile} {skills_json}".lower()
-            matches = sum(1 for kw in keywords if kw in text)
-            keyword_score = (matches / len(keywords)) if keywords else 0.5
-            
-            # Final score
-            distance_factor = max(0.5, 1.0 - (distance_km / max_distance_km)) if max_distance_km > 0 else 1.0
-            match_score = (keyword_score * 50 + freshness * 30 + distance_factor * 20)
-            
-            # Parse skills
+            # Parse skills properly
             try:
-                skills = json.loads(skills_json) if skills_json else []
+                job_skills = json.loads(skills_json) if skills_json else []
+                job_skills = [s.lower().strip() for s in job_skills]
             except:
-                skills = skills_json.split(",") if skills_json else []
+                job_skills = [s.lower().strip() for s in skills_json.split(",")] if skills_json else []
+            
+            # Calculate keyword match with expanded keywords
+            text = f"{profile} {' '.join(job_skills)}".lower()
+            matches = sum(1 for kw in expanded_keywords if kw in text)
+            
+            # Calculate skill overlap
+            skill_overlap = len(set(expanded_keywords) & set(job_skills))
+            
+            # Combined keyword score
+            keyword_score = max(
+                matches / len(keywords) if keywords else 0,
+                skill_overlap / len(keywords) if keywords else 0
+            )
+            
+            # Filter out zero matches
+            if keyword_score == 0:
+                continue
+            
+            # Improved scoring: keyword 70%, freshness 20%, distance 10%
+            distance_factor = max(0.5, 1.0 - (distance_km / max_distance_km)) if max_distance_km > 0 else 1.0
+            match_score = (keyword_score * 70 + freshness * 20 + distance_factor * 10)
             
             results.append({
                 'id': internship_id,
@@ -135,7 +171,7 @@ class LightweightSearchEngine:
                 'stipend_max': stipend_max,
                 'duration_months': duration_months,
                 'education_req': education_req,
-                'skills': skills,
+                'skills': job_skills,
                 'perks': perks,
                 'apply_by': apply_by,
                 'match_score': round(match_score, 1),
