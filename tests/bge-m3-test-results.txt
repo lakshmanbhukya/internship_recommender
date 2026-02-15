@@ -1,0 +1,564 @@
+2026-02-14 22:52:42.119076: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2026-02-14 22:52:47.670511: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING:tensorflow:From C:\Users\laxman\AppData\Local\Programs\Python\Python313\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+
+================================================================================
+                         BGE-M3 SEMANTIC SEARCH TEST
+================================================================================
+
+Initializing BGE-M3 model (this may take a moment)...
+[FULL] Using hybrid search engine (full mode)
+Loading FAISS index...
+[OK] FAISS index loaded: 8483 vectors
+[OK] ID mapping loaded: 8483 IDs
+[OK] Connected to SQLite DB
+Loading BAAI/bge-m3 on CPU (this may take a moment)...
+[OK] Model loaded
+BGE-M3 model loaded successfully!
+
+
+================================================================================
+                                   TEST 1/10
+================================================================================
+
+Student: Rahul - Backend Developer
+Skills: Python, Django, REST API, PostgreSQL
+Education: B.Tech
+Location: Bangalore (within 50km)
+Min Stipend: Rs.10000
+
+Top 10 Recommendations:
+
+1. Artificial Intelligence (AI) @ Elementals.ai
+   Location: Bangalore (0.0km away)
+   Stipend: Rs.20,000-40,000/month
+   Skills: Computer Vision, Transformers
+   Match Score: 52.0
+
+2. Product Analytics @ Scaler
+   Location: Bangalore (0.0km away)
+   Stipend: Rs.30,000-35,000/month
+   Skills: Power BI, Python, SQL
+   Match Score: 52.0
+
+3. IOT Intern @ Intugine Technologies Private Limited
+   Location: Bangalore (0.0km away)
+   Stipend: Rs.10,000-11,000/month
+   Skills: Internet of Things (IoT), Software Testing
+   Match Score: 51.900001525878906
+
+4. AI/ML @ Prodoc AI
+   Location: Bangalore (0.0km away)
+   Stipend: Rs.15,000-20,000/month
+   Skills: FastAPI, MongoDB, Python
+   Match Score: 51.79999923706055
+
+5. AI Engineer @ Icecreamlabs
+   Location: Bangalore (0.0km away)
+   Stipend: Rs.20,000-30,000/month
+   Skills: Model Evaluation, Model fine-tuning, Python
+   Match Score: 51.79999923706055
+
+6. Inside Sales @ Stayfindz
+   Location: Bangalore (0.0km away)
+   Stipend: Rs.14,000-28,000/month
+   Skills: Effective Communication, Interpersonal skills, Problem Solving
+   Match Score: 51.5
+
+7. Interior Design @ Antarangni Interior Private Limited
+   Location: Bangalore (0.0km away)
+   Stipend: Rs.10,500-19,000/month
+   Skills: Adobe Photoshop, AutoCAD, Autodesk 3ds Max, Google SketchUp
+   Match Score: 51.5
+
+8. Embedded Systems @ InfinityX Innovations Private Limited
+   Location: Bangalore (0.0km away)
+   Stipend: Rs.17,500-17,500/month
+   Skills: Arduino, C++ Programming, Circuit Design, C Programming
+   Match Score: 51.5
+
+9. Interior Design @ Dashank Designs Pvt. Ltd
+   Location: Bangalore (0.0km away)
+   Stipend: Rs.10,000-12,000/month
+   Skills: Adobe Photoshop, AutoCAD, Enscape, Google SketchUp
+   Match Score: 51.5
+
+10. Data Analyst @ BXP Support And Solutions Private Limited
+   Location: Bangalore (0.0km away)
+   Stipend: Rs.17,500-20,500/month
+   Skills: Business Analysis, Data Analytics, MS-Excel, Power BI
+   Match Score: 51.400001525878906
+
+
+================================================================================
+                                   TEST 2/10
+================================================================================
+
+Student: Priya - Frontend Developer
+Skills: React, JavaScript, HTML, CSS, TypeScript
+Education: B.Tech
+Location: Mumbai (within 30km)
+Min Stipend: Rs.8000
+
+Top 10 Recommendations:
+
+1. Entry Level Software Engineer @ Mple AI
+   Location: Mumbai (0.0km away)
+   Stipend: Rs.10,000-15,000/month
+   Skills: Express.js, JavaScript, MongoDB, Node.js
+   Match Score: 53.29999923706055
+
+2. Front End Development @ InstaWeb Labs Private Limited
+   Location: Mumbai (0.0km away)
+   Stipend: Rs.10,000-15,000/month
+   Skills: AngularJS, CSS, HTML, JavaScript
+   Match Score: 52.5
+
+3. Content Writing @ Insta Group
+   Location: Mumbai (0.0km away)
+   Stipend: Rs.8,000-10,000/month
+   Skills: Blogging, Content Writing, Creative Writing
+   Match Score: 52.29999923706055
+
+4. Content Writing @ UniAcco
+   Location: Mumbai (0.0km away)
+   Stipend: Rs.15,000-20,000/month
+   Skills: Creative Writing, English Proficiency (Spoken), Search Engine Optimization (SEO)
+   Match Score: 52.20000076293945
+
+5. Content and Social Media Marketing @ Indian School Of Image Management
+   Location: Mumbai (0.0km away)
+   Stipend: Rs.8,000-8,000/month
+   Skills: Content Writing, Instagram Marketing, Social Media Marketing
+   Match Score: 52.20000076293945
+
+6. Graphic Design @ Besick
+   Location: Mumbai (0.0km away)
+   Stipend: Rs.10,000-15,000/month
+   Skills: Adobe Illustrator, Adobe Photoshop, Canva, Capcut
+   Match Score: 52.099998474121094
+
+7. Manual Testing @ InstaWeb Labs Private Limited
+   Location: Mumbai (0.0km away)
+   Stipend: Rs.10,000-15,000/month
+   Skills: CSS, HTML, JavaScript, Python
+   Match Score: 51.900001525878906
+
+8. Human Resources (HR) @ InstaWeb Labs Private Limited
+   Location: Mumbai (0.0km away)
+   Stipend: Rs.17,000-17,000/month
+   Skills: Effective Communication, English Proficiency (Spoken), English Proficiency (Written), Market Analysis
+   Match Score: 51.900001525878906
+
+9. Graphic Design @ Web Dakaar Digital Consultancy LLP
+   Location: Mumbai (0.0km away)
+   Stipend: Rs.8,000-10,000/month
+   Skills: Adobe Illustrator, Adobe InDesign, Adobe Photoshop, Video Editing
+   Match Score: 51.900001525878906
+
+10. Graphic Design @ Web Dakaar Digital Consultancy LLP
+   Location: Mumbai (0.0km away)
+   Stipend: Rs.8,000-10,000/month
+   Skills: Adobe Illustrator, Adobe InDesign, Adobe Photoshop, Video Editing
+   Match Score: 51.900001525878906
+
+
+================================================================================
+                                   TEST 3/10
+================================================================================
+
+Student: Amit - Data Scientist
+Skills: Python, Machine Learning, Pandas, NumPy, TensorFlow
+Education: M.Tech
+Location: Bangalore (within 50km)
+Min Stipend: Rs.15000
+
+Top 7 Recommendations:
+
+1. Artificial Intelligence (AI) @ Elementals.ai
+   Location: Bangalore (0.0km away)
+   Stipend: Rs.20,000-40,000/month
+   Skills: Computer Vision, Transformers
+   Match Score: 52.20000076293945
+
+2. AI Engineer @ Icecreamlabs
+   Location: Bangalore (0.0km away)
+   Stipend: Rs.20,000-30,000/month
+   Skills: Model Evaluation, Model fine-tuning, Python
+   Match Score: 52.20000076293945
+
+3. Motion Graphics (AI Tools) @ Integral Solution
+   Location: Bangalore (0.0km away)
+   Stipend: Rs.30,000-35,000/month
+   Skills: AI Image Generation, Animation, Generative AI Tools, Motion Graphics
+   Match Score: 51.79999923706055
+
+4. Motion Graphics (AI Tools) @ Integral Solution
+   Location: Bangalore (0.0km away)
+   Stipend: Rs.30,000-35,000/month
+   Skills: AI Image Generation, Animation, Generative AI Tools, Motion Graphics
+   Match Score: 51.79999923706055
+
+5. Computer Vision @ BigVision
+   Location: Bangalore (0.0km away)
+   Stipend: Rs.50,000-50,000/month
+   Skills: Computer Vision, OpenCV, Python
+   Match Score: 51.70000076293945
+
+6. Embedded Systems @ InfinityX Innovations Private Limited
+   Location: Bangalore (0.0km away)
+   Stipend: Rs.17,500-17,500/month
+   Skills: Arduino, C++ Programming, Circuit Design, C Programming
+   Match Score: 51.599998474121094
+
+7. Embedded Systems @ Lazy Idli Private Limited
+   Location: Bangalore (0.0km away)
+   Stipend: Rs.20,000-22,000/month
+   Skills: Arduino, ARM Microcontroller, C++ Programming, Circuit Design
+   Match Score: 51.29999923706055
+
+
+================================================================================
+                                   TEST 4/10
+================================================================================
+
+Student: Sneha - Digital Marketer
+Skills: Social Media Marketing, Content Writing, SEO, Google Analytics
+Education: B.Com
+Location: Delhi (within 40km)
+Min Stipend: Rs.5000
+
+Top 10 Recommendations:
+
+1. Social Media Marketing @ Innovader Technologies
+   Location: Delhi (0.0km away)
+   Stipend: Rs.7,000-7,000/month
+   Skills: Content Marketing, Creative Thinking, Instagram Marketing, Search Engine Optimization (SEO)
+   Match Score: 53.79999923706055
+
+2. Social Media Marketing @ Bglsocials
+   Location: Delhi (0.0km away)
+   Stipend: Rs.10,000-15,000/month
+   Skills: Content Writing, Graphic Design, Instagram Marketing, Social Media Marketing
+   Match Score: 53.70000076293945
+
+3. Social Media Marketing @ Indika AI Private Limited
+   Location: Delhi (0.0km away)
+   Stipend: Rs.5,000-15,000/month
+   Skills: Digital Marketing, Social Media Marketing, YouTube Ads
+   Match Score: 53.599998474121094
+
+4. Search Engine Optimization (SEO) @ Www.startupcoaching.in
+   Location: Delhi (0.0km away)
+   Stipend: Rs.10,000-10,000/month
+   Skills: Digital Marketing, Google AdWords, Google Analytics, Search Engine Marketing (SEM)
+   Match Score: 53.5
+
+5. Social Media Marketing @ Digital Guruji
+   Location: Delhi (0.0km away)
+   Stipend: Rs.15,000-15,000/month
+   Skills: Creative Writing, English Proficiency (Written), Social Media Marketing, Video Editing
+   Match Score: 53.400001525878906
+
+6. Content and Social Media Marketing @ Intoglo
+   Location: Delhi (0.0km away)
+   Stipend: Rs.11,000-12,500/month
+   Skills: Attention to Detail, Canva, Content Writing, Generative AI Tools
+   Match Score: 53.400001525878906
+
+7. Digital Marketing @ Strategic Engagement And Event Solutions (SEES)
+   Location: Delhi (0.0km away)
+   Stipend: Rs.12,000-12,000/month
+   Skills: Content Writing, Digital Marketing, English Proficiency (Spoken), English Proficiency (Written)
+   Match Score: 53.29999923706055
+
+8. Social Media Marketing @ Content Masters
+   Location: Delhi (0.0km away)
+   Stipend: Rs.10,000-15,000/month
+   Skills: Digital Marketing, English Proficiency (Spoken), English Proficiency (Written), Social Media Marketing
+   Match Score: 53.29999923706055
+
+9. Social Media Marketing @ Socionaut Media
+   Location: Delhi (0.0km away)
+   Stipend: Rs.7,000-10,000/month
+   Skills: Content Writing, Creative Writing, English Proficiency (Written), Instagram Marketing
+   Match Score: 53.29999923706055
+
+10. Digital Marketing @ Infokey Technology Private Limited
+   Location: Delhi (0.0km away)
+   Stipend: Rs.5,000-8,000/month
+   Skills: Digital Marketing, Email Marketing, English Proficiency (Written), Facebook Ads
+   Match Score: 53.20000076293945
+
+
+================================================================================
+                                   TEST 5/10
+================================================================================
+
+Student: Karthik - Full Stack Developer
+Skills: MERN Stack, Node.js, React, MongoDB, Express
+Education: B.Tech
+Location: Hyderabad (within 50km)
+Min Stipend: Rs.12000
+
+Top 3 Recommendations:
+
+1. Full Stack Development @ Highway Delite
+   Location: Remote (0.0km away)
+   Stipend: Rs.20,000-22,000/month
+   Skills: JavaScript, MongoDB, Node.js, React
+   Match Score: 62.400001525878906
+
+2. Full Stack Development @ Arachnomesh Technologies Private Limited
+   Location: Remote (0.0km away)
+   Stipend: Rs.15,001-30,000/month
+   Skills: CSS, HTML, JavaScript, MongoDB
+   Match Score: 62.29999923706055
+
+3. Full Stack Development @ Yardstick
+   Location: Remote (0.0km away)
+   Stipend: Rs.15,000-25,000/month
+   Skills: CSS, HTML, JavaScript, MongoDB
+   Match Score: 62.0
+
+
+================================================================================
+                                   TEST 6/10
+================================================================================
+
+Student: Ananya - UI/UX Designer
+Skills: Figma, Adobe XD, UI Design, Prototyping, User Research
+Education: B.Des
+Location: Bangalore (within 30km)
+Min Stipend: Rs.8000
+
+Top 10 Recommendations:
+
+1. Graphic Design @ Shruti Sushma
+   Location: Bangalore (0.0km away)
+   Stipend: Rs.18,000-25,000/month
+   Skills: Adobe Illustrator, Adobe InDesign, Adobe Photoshop, Adobe Photoshop Lightroom CC
+   Match Score: 53.20000076293945
+
+2. Graphic Design @ Enorr Ventures LLP
+   Location: Bangalore (0.0km away)
+   Stipend: Rs.12,000-12,000/month
+   Skills: Adobe Illustrator, Adobe Photoshop, CorelDRAW, Figma
+   Match Score: 53.099998474121094
+
+3. Graphic Design @ Confluencr
+   Location: Bangalore (0.0km away)
+   Stipend: Rs.12,000-12,000/month
+   Skills: Adobe Photoshop, Canva, Figma
+   Match Score: 53.0
+
+4. Graphic Design @ Sugar.fit
+   Location: Bangalore (0.0km away)
+   Stipend: Rs.15,000-17,000/month
+   Skills: Adobe Illustrator, Adobe InDesign, Adobe Photoshop, Canva
+   Match Score: 52.900001525878906
+
+5. UI/UX Design @ Talview
+   Location: Bangalore (0.0km away)
+   Stipend: Rs.15,000-20,000/month
+   Skills: Balsamiq, Figma, InVision, Sketch
+   Match Score: 52.79999923706055
+
+6. Graphic Design @ Skills Beyond Education
+   Location: Bangalore (0.0km away)
+   Stipend: Rs.10,000-10,000/month
+   Skills: Adobe Illustrator, Adobe Photoshop, Adobe Premiere Pro, UI & UX Design
+   Match Score: 52.70000076293945
+
+7. Graphic Design @ Sipani Properties (P) Limited
+   Location: Bangalore (0.0km away)
+   Stipend: Rs.10,000-20,000/month
+   Skills: Adobe Illustrator, Figma
+   Match Score: 52.5
+
+8. Interior Design @ Antarangni Interior Private Limited
+   Location: Bangalore (0.0km away)
+   Stipend: Rs.10,500-19,000/month
+   Skills: Adobe Photoshop, AutoCAD, Autodesk 3ds Max, Google SketchUp
+   Match Score: 52.5
+
+9. Interior Design @ Atelier Astil
+   Location: Bangalore (0.0km away)
+   Stipend: Rs.8,000-10,000/month
+   Skills: Adobe Photoshop, AutoCAD, Autodesk 3ds Max, Google SketchUp
+   Match Score: 52.400001525878906
+
+10. Graphic Design @ Tripcat
+   Location: Bangalore (0.0km away)
+   Stipend: Rs.15,000-20,000/month
+   Skills: Adobe Creative Suite, Adobe Illustrator, CorelDRAW, Figma
+   Match Score: 52.400001525878906
+
+
+================================================================================
+                                   TEST 7/10
+================================================================================
+
+Student: Rohan - Mobile Developer
+Skills: React Native, Android, iOS, Flutter, Firebase
+Education: B.Tech
+Location: Pune (within 50km)
+Min Stipend: Rs.10000
+
+Top 1 Recommendations:
+
+1. Front End Development @ Idea Usher
+   Location: Remote (0.0km away)
+   Stipend: Rs.10,000-15,000/month
+   Skills: JavaScript, Next.js, React, React Native
+   Match Score: 51.70000076293945
+
+
+================================================================================
+                                   TEST 8/10
+================================================================================
+
+Student: Divya - Content Creator
+Skills: Content Writing, Copywriting, Blog Writing, Social Media
+Education: B.A
+Location: Mumbai (within 50km)
+Min Stipend: Rs.5000
+
+Top 10 Recommendations:
+
+1. Content Writing @ Insta Group
+   Location: Mumbai (0.0km away)
+   Stipend: Rs.8,000-10,000/month
+   Skills: Blogging, Content Writing, Creative Writing
+   Match Score: 54.20000076293945
+
+2. Content and Social Media Marketing @ Indian School Of Image Management
+   Location: Mumbai (0.0km away)
+   Stipend: Rs.8,000-8,000/month
+   Skills: Content Writing, Instagram Marketing, Social Media Marketing
+   Match Score: 53.599998474121094
+
+3. Creative Content & Brand Operations Intern @ Soulful Living
+   Location: Mumbai (0.0km away)
+   Stipend: Rs.10,000-15,000/month
+   Skills: Collaboration, Content Editing, Content Marketing, Effective Communication
+   Match Score: 53.20000076293945
+
+4. Content Writing @ Soulflower
+   Location: Mumbai (0.0km away)
+   Stipend: Rs.11,000-15,000/month
+   Skills: Blogging, Content Writing, Creative Thinking, Creative Writing
+   Match Score: 53.099998474121094
+
+5. Content Writing @ UniAcco
+   Location: Mumbai (0.0km away)
+   Stipend: Rs.15,000-20,000/month
+   Skills: Creative Writing, English Proficiency (Spoken), Search Engine Optimization (SEO)
+   Match Score: 53.0
+
+6. Content and Social Media Marketing @ Pooja M
+   Location: Mumbai (0.0km away)
+   Stipend: Rs.10,000-20,000/month
+   Skills: Content Editing, Content Management, Content Marketing, Content Writing
+   Match Score: 52.900001525878906
+
+7. Content and Social Media Marketing @ Unsquare
+   Location: Mumbai (0.0km away)
+   Stipend: Rs.7,000-9,000/month
+   Skills: Content Editing, Social Media Marketing, Video Editing, Videography
+   Match Score: 52.900001525878906
+
+8. Content and Social Media Marketing @ Swati Mishra
+   Location: Mumbai (0.0km away)
+   Stipend: Rs.5,000-7,500/month
+   Skills: Content Writing, Photography
+   Match Score: 52.79999923706055
+
+9. Content Writing @ Simit Bhagat Studios
+   Location: Mumbai (0.0km away)
+   Stipend: Rs.9,000-10,000/month
+   Skills: Blogging, Creative Writing, English Proficiency (Spoken), English Proficiency (Written)
+   Match Score: 52.70000076293945
+
+10. Social Media & Content @ GNZY Technologies
+   Location: Mumbai (0.0km away)
+   Stipend: Rs.6,000-25,000/month
+   Skills: Community Management, Content Editing, Content Management, Content Marketing
+   Match Score: 52.70000076293945
+
+
+================================================================================
+                                   TEST 9/10
+================================================================================
+
+Student: Arjun - DevOps Engineer
+Skills: Docker, Kubernetes, AWS, CI/CD, Linux
+Education: B.Tech
+Location: Bangalore (within 50km)
+Min Stipend: Rs.15000
+
+Top 3 Recommendations:
+
+1. Artificial Intelligence (AI) @ Elementals.ai
+   Location: Bangalore (0.0km away)
+   Stipend: Rs.20,000-40,000/month
+   Skills: Computer Vision, Transformers
+   Match Score: 51.900001525878906
+
+2. Embedded Systems @ InfinityX Innovations Private Limited
+   Location: Bangalore (0.0km away)
+   Stipend: Rs.17,500-17,500/month
+   Skills: Arduino, C++ Programming, Circuit Design, C Programming
+   Match Score: 51.599998474121094
+
+3. Embedded Systems @ Lazy Idli Private Limited
+   Location: Bangalore (0.0km away)
+   Stipend: Rs.20,000-22,000/month
+   Skills: Arduino, ARM Microcontroller, C++ Programming, Circuit Design
+   Match Score: 51.5
+
+
+================================================================================
+                                   TEST 10/10
+================================================================================
+
+Student: Meera - Business Analyst
+Skills: Excel, SQL, Data Analysis, Business Intelligence, Tableau
+Education: MBA
+Location: Delhi (within 40km)
+Min Stipend: Rs.12000
+
+Top 3 Recommendations:
+
+1. Data Entry @ AVM Healthcare Products Private Limited
+   Location: Delhi (0.0km away)
+   Stipend: Rs.12,000-20,000/month
+   Skills: BASIC, Computer skills, Data Analytics, MS-Excel
+   Match Score: 52.900001525878906
+
+2. Accounting & Tally @ Isourse
+   Location: Delhi (0.0km away)
+   Stipend: Rs.20,000-25,000/month
+   Skills: Accounting, Advanced Excel, Bank Reconciliation, Finance
+   Match Score: 52.099998474121094
+
+3. Data Science @ Perilabs
+   Location: Delhi (0.0km away)
+   Stipend: Rs.20,000-25,000/month
+   Skills: Data Science, Mathematics, Problem Solving
+   Match Score: 51.79999923706055
+
+
+================================================================================
+                                 TEST SUMMARY
+================================================================================
+
+All 10 student profiles tested successfully!
+
+BGE-M3 Semantic Search Features:
+   - Understands context and intent
+   - Matches similar skills (e.g., 'React' -> 'Frontend')
+   - Handles skill variations (e.g., 'ML' -> 'Machine Learning')
+   - Semantic similarity scoring
+   - Hybrid search (70% semantic + 30% keyword)

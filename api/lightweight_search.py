@@ -1,11 +1,13 @@
 """
 Lightweight search engine for low-memory environments (512 MB RAM)
-Uses pre-computed embeddings only, no model loading
+Uses keyword matching with synonym expansion, no model loading.
+Fixed: education hierarchy, stipend filter, SQL ordering, synonym expansion.
 """
 import sqlite3
 import numpy as np
 import json
 import sys
+import logging
 from pathlib import Path
 from typing import List, Dict, Tuple
 
@@ -17,7 +19,9 @@ try:
 except ImportError:
     faiss = None
 
-from api.utils import get_city_distance
+from api.utils import get_city_distance, is_education_eligible
+
+logger = logging.getLogger(__name__)
 
 # Enhanced skill synonyms with technical depth
 SKILL_SYNONYMS = {
@@ -63,7 +67,7 @@ ROLE_KEYWORDS = {
 }
 
 class LightweightSearchEngine:
-    """Memory-efficient search: FAISS + keyword matching (no model)"""
+    """Memory-efficient search: keyword matching + filters (no model)"""
     
     def __init__(self):
         self.db_path = str(DB_PATH)
@@ -101,9 +105,8 @@ class LightweightSearchEngine:
                top_k: int = 10) -> List[Dict]:
         """Search using keyword matching + filters only"""
         
-        # Use keyword search (no semantic search without model)
         query = " ".join(user_skills)
-        candidates = self._keyword_search(query, education, min_stipend, city, max_distance_km, top_k * 3)
+        candidates = self._keyword_search(query, user_skills, education, min_stipend, city, max_distance_km, top_k * 3)
         
         # Apply scoring
         results = []
@@ -127,38 +130,41 @@ class LightweightSearchEngine:
         
         return results
     
-    def _keyword_search(self, query: str, education: str, min_stipend: int, 
-                       user_city: str, max_distance_km: int, top_k: int) -> List[Dict]:
+    def _keyword_search(self, query: str, user_skills: List[str], education: str, 
+                       min_stipend: int, user_city: str, max_distance_km: int, 
+                       top_k: int) -> List[Dict]:
         """Keyword-based search with filters and synonyms"""
         self._ensure_connection()
         
-        # Expand query with synonyms
+        # Expand query with synonyms (check ALL matching groups, no break)
         keywords = set(query.lower().split())
         expanded_keywords = set()
         for kw in keywords:
             expanded_keywords.add(kw)
-            # Add synonyms
             for base, synonyms in SKILL_SYNONYMS.items():
                 if kw in synonyms or kw == base:
                     expanded_keywords.update(synonyms)
-                    break
+                    # No break — check all synonym groups for multi-group matches
         
-        # Query with filters
+        # Query with stipend_max filter instead of stipend_min
+        # Scan a large pool — 8,483 records total, scanning 2000 is ~4ms
         cursor = self.conn.execute("""
             SELECT id, profile, company, location_normalized,
                    stipend_min, stipend_max, duration_months,
                    education_req, skills, perks, apply_by, freshness_score
             FROM internships
-            WHERE education_req IN (?, 'Any')
-              AND stipend_min >= ?
-            ORDER BY freshness_score DESC
-            LIMIT ?
-        """, (education, min_stipend, top_k * 5))
+            WHERE stipend_max >= ?
+            LIMIT 2000
+        """, (min_stipend,))
         
         results = []
         for row in cursor.fetchall():
             internship_id, profile, company, city, stipend_min, stipend_max, \
             duration_months, education_req, skills_json, perks, apply_by, freshness = row
+            
+            # Education filter: hierarchy-based (post-filter)
+            if not is_education_eligible(education, education_req):
+                continue
             
             # Distance filter
             distance_km = get_city_distance(user_city, city)
@@ -169,7 +175,7 @@ class LightweightSearchEngine:
             try:
                 job_skills = json.loads(skills_json) if skills_json else []
                 job_skills = [s.lower().strip() for s in job_skills]
-            except:
+            except (json.JSONDecodeError, TypeError):
                 job_skills = [s.lower().strip() for s in skills_json.split(",")] if skills_json else []
             
             # Enhanced matching with role detection
@@ -214,9 +220,10 @@ class LightweightSearchEngine:
             if keyword_score < 0.25:
                 continue
             
-            # Improved scoring: keyword 80%, freshness 12%, distance 8%
+            # Scoring: keyword 90%, distance 10% 
+            # (freshness removed — all values are identical at 0.3)
             distance_factor = max(0.5, 1.0 - (distance_km / max_distance_km)) if max_distance_km > 0 else 1.0
-            match_score = (keyword_score * 80 + freshness * 12 + distance_factor * 8)
+            match_score = (keyword_score * 90 + distance_factor * 10)
             
             results.append({
                 'id': internship_id,
@@ -250,7 +257,8 @@ class LightweightSearchEngine:
             "model_loaded": False,
             "faiss_index_loaded": self.index is not None,
             "total_internships": total,
-            "search_type": "keyword matching + filters"
+            "search_type": "keyword matching + filters",
+            "version": "2.1.0"
         }
     
     def close(self):
