@@ -1,0 +1,1140 @@
+================================================================================
+  INTERNSHIP RECOMMENDATION OUTPUT -- SIDE-BY-SIDE COMPARISON
+  Generated: 2026-02-15 19:14:15
+  Queries: 10 | Top-K: 5
+  Modes: Lightweight (keyword+FAISS) vs Full (BGE-M3 semantic+FTS5)
+================================================================================
+
+--------------------------------------------------------------------------------
+  QUERY 1: Backend Developer (Bangalore)
+  Skills    : Python, Django, REST API
+  Education : B.Tech
+  City      : Bangalore (max 100km)
+  Min Stipend: Rs.5,000
+--------------------------------------------------------------------------------
+
+  [LIGHTWEIGHT] (147ms, 5 results)
+
+    #1  Backend Development
+         Company   : Whatbytes
+         Location  : Remote (0 km)
+         Stipend   : Rs.10,000 - Rs.20,000/month
+         Duration  : 6 months
+         Education : Any
+         Skills    : data structures, django, postgresql, python, rest api
+         Score     : 123.4/100
+         Perks     : Certificate, Flexible, Letter Of Recommendation
+
+    #2  Python Development
+         Company   : EvoNexis
+         Location  : Remote (0 km)
+         Stipend   : Rs.10,000 - Rs.20,000/month
+         Duration  : 3 months
+         Education : Any
+         Skills    : css, django, flask, html, python, rest api
+         Score     : 123.1/100
+         Perks     : Certificate, Flexible, Letter Of Recommendation, 5 Days A Week
+
+    #3  Python Development
+         Company   : Optimasys
+         Location  : Remote (0 km)
+         Stipend   : Rs.15,000 - Rs.25,000/month
+         Duration  : 3 months
+         Education : Any
+         Skills    : css, django, flask, html, python, rest api
+         Score     : 123.1/100
+         Perks     : Certificate, Flexible, Letter Of Recommendation, 5 Days A Week
+
+    #4  Backend Development
+         Company   : Hooman Digital LLP
+         Location  : Remote (0 km)
+         Stipend   : Rs.12,000 - Rs.15,000/month
+         Duration  : 6 months
+         Education : Any
+         Skills    : amazon ec2, express.js, mongodb, mysql, next.js, node.js (+2 more)
+         Score     : 104.3/100
+         Perks     : Certificate, Flexible, Letter Of Recommendation, Mentorship
+
+    #5  Full Stack Development
+         Company   : Securigeek (Paris, France)
+         Location  : Remote (0 km)
+         Stipend   : Rs.10,000 - Rs.15,000/month
+         Duration  : 6 months
+         Education : Any
+         Skills    : angular, css, git, html, javascript, python (+2 more)
+         Score     : 103.7/100
+         Perks     : Flexible, Letter Of Recommendation, 5 Days A Week
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  [FULL (BGE-M3)] (8380ms, 5 results)
+
+    #1  Backend Development
+         Company   : AMRR TechSols Pvt Ltd
+         Location  : Bangalore (0 km)
+         Stipend   : Rs.5,000 - Rs.5,000/month
+         Duration  : 6 months
+         Education : Any
+         Skills    : Django, FastAPI, Python, REST API
+         Score     : 100.0/100
+         Perks     : Certificate, Flexible, Letter Of Recommendation
+
+    #2  Django Python Developer
+         Company   : PRNK Infotech LLP
+         Location  : Remote (0 km)
+         Stipend   : Rs.12,001 - Rs.15,001/month
+         Duration  : 6 months
+         Education : Any
+         Skills    : Django, Django Rest Framework, Python, REST API
+         Score     : 100.0/100
+         Perks     : Certificate, Flexible, Letter Of Recommendation, 5 Days A Week
+
+    #3  Backend Development
+         Company   : Vidyanet Innovations Private Limited
+         Location  : Remote (0 km)
+         Stipend   : Rs.5,000 - Rs.5,000/month
+         Duration  : 3 months
+         Education : Any
+         Skills    : Django, FastAPI, Flask, MongoDB, MySQL, PostgreSQL (+2 more)
+         Score     : 100.0/100
+         Perks     : Certificate, Flexible, Letter Of Recommendation, Mentorship
+
+    #4  Artificial Intelligence (AI)
+         Company   : Elementals.ai
+         Location  : Bangalore (0 km)
+         Stipend   : Rs.20,000 - Rs.40,000/month
+         Duration  : 6 months
+         Education : Any
+         Skills    : Computer Vision, Transformers
+         Score     : 58.1/100
+         Perks     : Certificate, Flexible, Letter Of Recommendation, Mentorship
+
+    #5  Content Writing
+         Company   : The Bangalore Editorial
+         Location  : Bangalore (0 km)
+         Stipend   : Rs.5,000 - Rs.5,001/month
+         Duration  : 3 months
+         Education : Any
+         Skills    : Creative Writing, English Proficiency (Written)
+         Score     : 56.4/100
+         Perks     : Certificate
+
+
+--------------------------------------------------------------------------------
+  QUERY 2: Frontend Developer (Mumbai)
+  Skills    : React, JavaScript, HTML, CSS
+  Education : B.Tech
+  City      : Mumbai (max 100km)
+  Min Stipend: Rs.0
+--------------------------------------------------------------------------------
+
+  [LIGHTWEIGHT] (54ms, 5 results)
+
+    #1  Front End Development
+         Company   : InstaWeb Labs Private Limited
+         Location  : Mumbai (0 km)
+         Stipend   : Rs.10,000 - Rs.15,000/month
+         Duration  : 6 months
+         Education : Any
+         Skills    : angularjs, css, html, javascript, node.js, react (+1 more)
+         Score     : 123.6/100
+         Perks     : Certificate, Flexible, Letter Of Recommendation, 5 Days A Week
+
+    #2  Front End Development
+         Company   : Finflock Systems Private Limited
+         Location  : Remote (0 km)
+         Stipend   : Rs.10,000 - Rs.14,000/month
+         Duration  : 6 months
+         Education : B.Tech
+         Skills    : css, figma, html, javascript, react, ui & ux design (+1 more)
+         Score     : 123.6/100
+         Perks     : Letter Of Recommendation
+
+    #3  Full Stack Development
+         Company   : Fafadia Tech
+         Location  : Mumbai (0 km)
+         Stipend   : Rs.14,999 - Rs.15,000/month
+         Duration  : 3 months
+         Education : Any
+         Skills    : css, html, javascript, mysql, node.js, python (+1 more)
+         Score     : 123.0/100
+         Perks     : Certificate, Letter Of Recommendation
+
+    #4  Full Stack Development
+         Company   : Arachnomesh Technologies Private Limited
+         Location  : Remote (0 km)
+         Stipend   : Rs.15,001 - Rs.30,000/month
+         Duration  : 3 months
+         Education : Any
+         Skills    : css, html, javascript, mongodb, mysql, node.js (+1 more)
+         Score     : 123.0/100
+         Perks     : Certificate, Letter Of Recommendation
+
+    #5  Front End Development
+         Company   : LSOYS Games & Apps
+         Location  : Remote (0 km)
+         Stipend   : Rs.1,000 - Rs.1,000/month
+         Duration  : 6 months
+         Education : Any
+         Skills    : bootstrap, css, flask, html, javascript, node.js (+2 more)
+         Score     : 123.0/100
+         Perks     : Certificate, Letter Of Recommendation
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  [FULL (BGE-M3)] (697ms, 5 results)
+
+    #1  Front End Development
+         Company   : InstaWeb Labs Private Limited
+         Location  : Mumbai (0 km)
+         Stipend   : Rs.10,000 - Rs.15,000/month
+         Duration  : 6 months
+         Education : Any
+         Skills    : AngularJS, CSS, HTML, JavaScript, Node.js, React (+1 more)
+         Score     : 100.0/100
+         Perks     : Certificate, Flexible, Letter Of Recommendation, 5 Days A Week
+
+    #2  Web Development(Full Stack)
+         Company   : Reflex Realty LLP
+         Location  : Mumbai (0 km)
+         Stipend   : Rs.7,000 - Rs.10,000/month
+         Duration  : 6 months
+         Education : Any
+         Skills    : APIs, CSS, CSS3, Firebase, Flutter, HTML (+2 more)
+         Score     : 70.4/100
+         Perks     : Certificate, Flexible, Letter Of Recommendation
+
+    #3  Content Writing
+         Company   : Art Of Tech Consulting
+         Location  : Mumbai (0 km)
+         Stipend   : Rs.5,000 - Rs.6,000/month
+         Duration  : 4 months
+         Education : Any
+         Skills    : Content Writing, Creative Writing, Digital Marketing, English Proficiency (Written), Instagram Marketing, LinkedIn Marketing (+1 more)
+         Score     : 68.3/100
+         Perks     : Certificate, Flexible, Letter Of Recommendation, 5 Days A Week
+
+    #4  Design – Web & Digital Solutions
+         Company   : Reflex Realty LLP
+         Location  : Mumbai (0 km)
+         Stipend   : Rs.7,000 - Rs.10,000/month
+         Duration  : 6 months
+         Education : Any
+         Skills    : Adobe After Effects, Adobe Animate, Adobe Illustrator, Adobe InDesign, Adobe Photoshop, Canva (+2 more)
+         Score     : 63.1/100
+         Perks     : Certificate, Flexible, Letter Of Recommendation
+
+    #5  Content Writing
+         Company   : Next Labs
+         Location  : Mumbai (0 km)
+         Stipend   : Rs.10,000 - Rs.12,000/month
+         Duration  : 6 months
+         Education : Any
+         Skills    : Creative Writing, Digital Marketing, Effective Communication, English Proficiency (Spoken), English Proficiency (Written), Multitasking (+2 more)
+         Score     : 62.2/100
+         Perks     : Certificate, Letter Of Recommendation, 5 Days A Week
+
+
+--------------------------------------------------------------------------------
+  QUERY 3: Data Scientist (Remote)
+  Skills    : Python, Machine Learning, Pandas, NumPy
+  Education : B.Tech
+  City      : Remote (max 5000km)
+  Min Stipend: Rs.0
+--------------------------------------------------------------------------------
+
+  [LIGHTWEIGHT] (96ms, 5 results)
+
+    #1  Python Developer
+         Company   : Ergode IT Services Private Limited
+         Location  : Mumbai (0 km)
+         Stipend   : Rs.8,000 - Rs.10,000/month
+         Duration  : 6 months
+         Education : Any
+         Skills    : apis, automation, data cleaning, data preprocessing, integration testing, numpy (+2 more)
+         Score     : 92.8/100
+         Perks     : Certificate, Flexible, Letter Of Recommendation, 5 Days A Week
+
+    #2  Machine Learning
+         Company   : Innovexis
+         Location  : Remote (0 km)
+         Stipend   : Rs.15,000 - Rs.25,000/month
+         Duration  : 3 months
+         Education : Any
+         Skills    : artificial intelligence, data analytics, data science, natural language processing (nlp), python, r programming
+         Score     : 80.2/100
+         Perks     : Certificate, Flexible, Letter Of Recommendation, 5 Days A Week
+
+    #3  Machine Learning
+         Company   : Anubrain Technology Private Limited
+         Location  : Remote (0 km)
+         Stipend   : Rs.3,000 - Rs.5,000/month
+         Duration  : 3 months
+         Education : Any
+         Skills    : artificial intelligence, computer vision, data analytics, data science, django, flask (+1 more)
+         Score     : 65.3/100
+         Perks     : Certificate, Flexible
+
+    #4  Python Development
+         Company   : EvoNexis
+         Location  : Remote (0 km)
+         Stipend   : Rs.10,000 - Rs.20,000/month
+         Duration  : 3 months
+         Education : Any
+         Skills    : css, django, flask, html, python, rest api
+         Score     : 63.5/100
+         Perks     : Certificate, Flexible, Letter Of Recommendation, 5 Days A Week
+
+    #5  Python Development
+         Company   : Optimasys
+         Location  : Remote (0 km)
+         Stipend   : Rs.15,000 - Rs.25,000/month
+         Duration  : 3 months
+         Education : Any
+         Skills    : css, django, flask, html, python, rest api
+         Score     : 63.5/100
+         Perks     : Certificate, Flexible, Letter Of Recommendation, 5 Days A Week
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  [FULL (BGE-M3)] (656ms, 5 results)
+
+    #1  Machine Learning
+         Company   : CareerNest
+         Location  : Remote (0 km)
+         Stipend   : Rs.10,000 - Rs.25,000/month
+         Duration  : 2 months
+         Education : Any
+         Skills    : Data Science, Python
+         Score     : 100.0/100
+         Perks     : Certificate, Flexible, Letter Of Recommendation, Mentorship, 5 Days A Week
+
+    #2  Machine Learning
+         Company   : Neurasys
+         Location  : Remote (0 km)
+         Stipend   : Rs.7,500 - Rs.15,000/month
+         Duration  : 3 months
+         Education : Any
+         Skills    : Data Analytics, Data Science, Natural Language Processing (NLP), Python
+         Score     : 100.0/100
+         Perks     : Certificate, Flexible, Letter Of Recommendation
+
+    #3  Artificial Intelligence (AI) Research
+         Company   : StartupXY LLP
+         Location  : Remote (0 km)
+         Stipend   : Rs.5,000 - Rs.5,000/month
+         Duration  : 6 months
+         Education : Any
+         Skills    : Artificial intelligence, Computer Vision, Natural Language Processing (NLP), Python
+         Score     : 100.0/100
+         Perks     : Certificate, Flexible, Letter Of Recommendation, 5 Days A Week
+
+    #4  Machine Learning
+         Company   : Innovexis
+         Location  : Remote (0 km)
+         Stipend   : Rs.15,000 - Rs.25,000/month
+         Duration  : 3 months
+         Education : Any
+         Skills    : Artificial intelligence, Data Analytics, Data Science, Natural Language Processing (NLP), Python, R Programming
+         Score     : 100.0/100
+         Perks     : Certificate, Flexible, Letter Of Recommendation, 5 Days A Week
+
+    #5  Machine Learning
+         Company   : Symonis
+         Location  : Remote (0 km)
+         Stipend   : Rs.10,000 - Rs.20,000/month
+         Duration  : 3 months
+         Education : Any
+         Skills    : Artificial intelligence, Data Analytics, Data Science, Natural Language Processing (NLP), Python
+         Score     : 100.0/100
+         Perks     : Certificate, Flexible, Letter Of Recommendation, 5 Days A Week
+
+
+--------------------------------------------------------------------------------
+  QUERY 4: Marketing Intern (Delhi)
+  Skills    : Social Media, Content Writing, SEO
+  Education : B.Com
+  City      : Delhi (max 50km)
+  Min Stipend: Rs.0
+--------------------------------------------------------------------------------
+
+  [LIGHTWEIGHT] (67ms, 5 results)
+
+    #1  Marketing & Graphic Design
+         Company   : House Of Merida
+         Location  : Remote (0 km)
+         Stipend   : Rs.13,000 - Rs.25,000/month
+         Duration  : 3 months
+         Education : Any
+         Skills    : adobe creative suite, content writing, digital marketing, graphic design, marketing strategies, search engine optimization (seo) (+1 more)
+         Score     : 127.9/100
+         Perks     : Certificate, Flexible, Letter Of Recommendation
+
+    #2  Marketing
+         Company   : Physio Slim Fit Wellness Center
+         Location  : Delhi (0 km)
+         Stipend   : Rs.5,000 - Rs.7,000/month
+         Duration  : 1 months
+         Education : Any
+         Skills    : canva, content writing, digital marketing, english proficiency (spoken), market research, search engine marketing (sem) (+2 more)
+         Score     : 127.9/100
+         Perks     : Certificate, Letter Of Recommendation
+
+    #3  Content and Social Media Marketing
+         Company   : Giftcarnation
+         Location  : Delhi (0 km)
+         Stipend   : Rs.4,000 - Rs.7,000/month
+         Duration  : 6 months
+         Education : Any
+         Skills    : content editing, content marketing, content writing, search engine optimization (seo), social media marketing
+         Score     : 126.5/100
+         Perks     : Certificate, Flexible, Letter Of Recommendation, 5 Days A Week
+
+    #4  Content Writing
+         Company   : Travel & Payments
+         Location  : Remote (0 km)
+         Stipend   : Rs.5,000 - Rs.10,000/month
+         Duration  : 6 months
+         Education : Any
+         Skills    : content marketing, content writing, creative writing, english proficiency (spoken), english proficiency (written), linkedin marketing (+2 more)
+         Score     : 126.5/100
+         Perks     : Certificate, Flexible, 5 Days A Week
+
+    #5  Social Media & Content Creation (Reels + Engagement)
+         Company   : Ayushi  Singh
+         Location  : Remote (0 km)
+         Stipend   : Rs.5,000 - Rs.5,000/month
+         Duration  : 4 months
+         Education : Any
+         Skills    : artificial intelligence, computer skills, content marketing, linkedin marketing, search engine optimization (seo), social media marketing (+2 more)
+         Score     : 125.2/100
+         Perks     : Certificate, Flexible, Letter Of Recommendation
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  [FULL (BGE-M3)] (714ms, 5 results)
+
+    #1  Content Writing
+         Company   : Socio Street Advertising LLP
+         Location  : Delhi (0 km)
+         Stipend   : Rs.5,000 - Rs.6,000/month
+         Duration  : 6 months
+         Education : Any
+         Skills    : Blogging, Content Writing, Digital Marketing, English Proficiency (Spoken), English Proficiency (Written), Search Engine Optimization (SEO)
+         Score     : 91.3/100
+         Perks     : Certificate, Flexible, 5 Days A Week
+
+    #2  Social Media Marketing
+         Company   : Bglsocials
+         Location  : Delhi (0 km)
+         Stipend   : Rs.10,000 - Rs.15,000/month
+         Duration  : 3 months
+         Education : Any
+         Skills    : Content Writing, Graphic Design, Instagram Marketing, Social Media Marketing, Video Editing
+         Score     : 89.8/100
+         Perks     : 5 Days A Week
+
+    #3  Social Media Marketing
+         Company   : Socionaut Media
+         Location  : Delhi (0 km)
+         Stipend   : Rs.7,000 - Rs.10,000/month
+         Duration  : 3 months
+         Education : Any
+         Skills    : Content Writing, Creative Writing, English Proficiency (Written), Instagram Marketing, Social Media Marketing
+         Score     : 84.4/100
+         Perks     : Certificate
+
+    #4  Content Writing
+         Company   : Economics Classes
+         Location  : Delhi (0 km)
+         Stipend   : Rs.15,000 - Rs.25,000/month
+         Duration  : 3 months
+         Education : Any
+         Skills    : Attention to Detail, Blogging, Content Writing, Copywriting, Creative Writing, English Proficiency (Spoken) (+2 more)
+         Score     : 83.5/100
+         Perks     : Certificate, Letter Of Recommendation
+
+    #5  Content Writing
+         Company   : Www.startupcoaching.in
+         Location  : Delhi (0 km)
+         Stipend   : Rs.10,000 - Rs.10,000/month
+         Duration  : 3 months
+         Education : Any
+         Skills    : Content Writing, Creative Writing, English Proficiency (Spoken), English Proficiency (Written)
+         Score     : 82.2/100
+         Perks     : Certificate, Flexible, Letter Of Recommendation, Mentorship, 5 Days A Week
+
+
+--------------------------------------------------------------------------------
+  QUERY 5: Mobile App Developer (Pune)
+  Skills    : Android, Java, Kotlin
+  Education : B.Tech
+  City      : Pune (max 100km)
+  Min Stipend: Rs.0
+--------------------------------------------------------------------------------
+
+  [LIGHTWEIGHT] (41ms, 5 results)
+
+    #1  Front End Development
+         Company   : AbhyaasIIT Educational Institute
+         Location  : Remote (0 km)
+         Stipend   : Rs.9,000 - Rs.10,000/month
+         Duration  : 6 months
+         Education : Any
+         Skills    : android, ci, cd, css, figma, git (+3 more)
+         Score     : 97.7/100
+         Perks     : Certificate, Flexible, Letter Of Recommendation
+
+    #2  Mobile App Development
+         Company   : Emoolar Technology Private Limited
+         Location  : Remote (0 km)
+         Stipend   : Rs.5,000 - Rs.5,500/month
+         Duration  : 3 months
+         Education : Any
+         Skills    : android, firebase, java
+         Score     : 97.7/100
+         Perks     : Certificate, Flexible, Letter Of Recommendation, 5 Days A Week
+
+    #3  Cyber Security
+         Company   : Grozoom Ventures Technology Private Limited
+         Location  : Remote (0 km)
+         Stipend   : Rs.10,000 - Rs.15,000/month
+         Duration  : 3 months
+         Education : Any
+         Skills    : android, apis, bash, computer networking, http, ios (+2 more)
+         Score     : 97.7/100
+         Perks     : Certificate, Flexible, Letter Of Recommendation
+
+    #4  Android App Development
+         Company   : Axe Consultancy And Security Services LLC
+         Location  : Remote (0 km)
+         Stipend   : Rs.20,000 - Rs.50,000/month
+         Duration  : 6 months
+         Education : Any
+         Skills    : android, firebase, java, kotlin, rest api, xml
+         Score     : 86.5/100
+         Perks     : Certificate, Flexible, Letter Of Recommendation
+
+    #5  Flutter Development
+         Company   : Belle Noor
+         Location  : Remote (0 km)
+         Stipend   : Rs.10,000 - Rs.12,000/month
+         Duration  : 1 months
+         Education : Any
+         Skills    : amazon cloudfront, amazon sns, amazon web services (aws), android, dart, firebase (+2 more)
+         Score     : 72.8/100
+         Perks     : Certificate, Flexible, Letter Of Recommendation, 5 Days A Week
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  [FULL (BGE-M3)] (711ms, 5 results)
+
+    #1  Android App Development
+         Company   : Cryptimatrix Solutions
+         Location  : Pune (0 km)
+         Stipend   : Rs.2,000 - Rs.2,001/month
+         Duration  : 6 months
+         Education : Any
+         Skills    : Android, Firebase, Java, Kotlin, REST API, XML
+         Score     : 100.0/100
+         Perks     : Certificate, 5 Days A Week
+
+    #2  Android App Development
+         Company   : Arachnomesh Technologies Private Limited
+         Location  : Remote (0 km)
+         Stipend   : Rs.15,001 - Rs.30,000/month
+         Duration  : 3 months
+         Education : Any
+         Skills    : Android, Firebase, Java, Kotlin, REST API, XML
+         Score     : 100.0/100
+         Perks     : Certificate, Letter Of Recommendation
+
+    #3  Android App Development
+         Company   : Cogent Web Services
+         Location  : Remote (0 km)
+         Stipend   : Rs.10,000 - Rs.10,000/month
+         Duration  : 3 months
+         Education : Any
+         Skills    : Android, Firebase, Java, Kotlin
+         Score     : 100.0/100
+         Perks     : Certificate, Letter Of Recommendation
+
+    #4  Psychology
+         Company   : Career-Domain
+         Location  : Pune (0 km)
+         Stipend   : Rs.5,000 - Rs.10,000/month
+         Duration  : 3 months
+         Education : Any
+         Skills    : English Proficiency (Spoken), English Proficiency (Written), Psychology
+         Score     : 60.5/100
+         Perks     : Certificate, Flexible
+
+    #5  Recruitment
+         Company   : Social HR
+         Location  : Pune (0 km)
+         Stipend   : Rs.4,000 - Rs.6,000/month
+         Duration  : 3 months
+         Education : Any
+         Skills    : Effective Communication, English Proficiency (Spoken), MS-Excel
+         Score     : 59.6/100
+         Perks     : Certificate, Letter Of Recommendation
+
+
+--------------------------------------------------------------------------------
+  QUERY 6: DevOps / Cloud (Bangalore, high stipend)
+  Skills    : Docker, AWS, Linux, CI/CD
+  Education : B.Tech
+  City      : Bangalore (max 100km)
+  Min Stipend: Rs.10,000
+--------------------------------------------------------------------------------
+
+  [LIGHTWEIGHT] (86ms, 3 results)
+
+    #1  Backend Development
+         Company   : Alemeno
+         Location  : Remote (0 km)
+         Stipend   : Rs.15,000 - Rs.20,000/month
+         Duration  : 6 months
+         Education : Any
+         Skills    : amazon web services (aws), ci, cd, devops, digitalocean, django (+3 more)
+         Score     : 58.4/100
+         Perks     : Certificate, Flexible, Letter Of Recommendation
+
+    #2  DevOps Engineer
+         Company   : XivTech
+         Location  : Remote (0 km)
+         Stipend   : Rs.10,000 - Rs.10,000/month
+         Duration  : 3 months
+         Education : Any
+         Skills    : amazon web services (aws), docker, jenkins, kubernetes, prometheus, terraform
+         Score     : 51.6/100
+         Perks     : Certificate, Flexible, Letter Of Recommendation
+
+    #3  AWS DevOps Engineer
+         Company   : 4x4 Advisory Services Private Limited
+         Location  : Bangalore (0 km)
+         Stipend   : Rs.15,000 - Rs.15,001/month
+         Duration  : 6 months
+         Education : Any
+         Skills    : amazon web services (aws), ansible, git, linux, terraform
+         Score     : 50.5/100
+         Perks     : Not Available
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  [FULL (BGE-M3)] (1066ms, 5 results)
+
+    #1  AWS DevOps Engineer
+         Company   : 4x4 Advisory Services Private Limited
+         Location  : Bangalore (0 km)
+         Stipend   : Rs.15,000 - Rs.15,001/month
+         Duration  : 6 months
+         Education : Any
+         Skills    : Amazon Web Services (AWS), Ansible, Git, Linux, Terraform
+         Score     : 100.0/100
+         Perks     : Not Available
+
+    #2  Learning & Development
+         Company   : Ibus Networks And Infrastructure Pvt. Ltd
+         Location  : Bangalore (0 km)
+         Stipend   : Rs.10,000 - Rs.20,000/month
+         Duration  : 3 months
+         Education : Any
+         Skills    : Analytical Thinking, CMS (Content Management System), Effective Communication, Management, Stakeholder Management, Training and Development (+1 more)
+         Score     : 68.9/100
+         Perks     : Certificate, Letter Of Recommendation, 5 Days A Week
+
+    #3  Data Entry
+         Company   : Docube Healthcare
+         Location  : Bangalore (0 km)
+         Stipend   : Rs.8,000 - Rs.11,000/month
+         Duration  : 3 months
+         Education : Any
+         Skills    : English Proficiency (Spoken), English Proficiency (Written), MS-Excel, MS-Office
+         Score     : 67.8/100
+         Perks     : Certificate, Flexible, Letter Of Recommendation
+
+    #4  Business Development
+         Company   : Bhawar Sales Corporation
+         Location  : Bangalore (0 km)
+         Stipend   : Rs.10,000 - Rs.12,000/month
+         Duration  : 4 months
+         Education : Any
+         Skills    : Effective Communication, MS-Excel, MS-Office
+         Score     : 66.7/100
+         Perks     : Certificate, Letter Of Recommendation
+
+    #5  Platform Engineer
+         Company   : Secure Machines Private Limited
+         Location  : Bangalore (0 km)
+         Stipend   : Rs.25,000 - Rs.30,000/month
+         Duration  : 6 months
+         Education : Any
+         Skills    : C Programming, Digital Circuits, Effective Communication, Embedded Systems, Problem Solving, Teamwork (+1 more)
+         Score     : 65.7/100
+         Perks     : Certificate, Flexible, Letter Of Recommendation, 5 Days A Week
+
+
+--------------------------------------------------------------------------------
+  QUERY 7: Graphic Designer (Delhi)
+  Skills    : Photoshop, Illustrator, Canva
+  Education : B.A
+  City      : Delhi (max 50km)
+  Min Stipend: Rs.0
+--------------------------------------------------------------------------------
+
+  [LIGHTWEIGHT] (47ms, 5 results)
+
+    #1  Video Editing & Graphic Designing
+         Company   : Hamari Pahchan NGO
+         Location  : Delhi (0 km)
+         Stipend   : Rs.5,000 - Rs.15,000/month
+         Duration  : 3 months
+         Education : Any
+         Skills    : adobe illustrator, adobe photoshop, adobe premiere pro, canva, english proficiency (spoken), english proficiency (written) (+2 more)
+         Score     : 86.5/100
+         Perks     : Certificate, Flexible, Letter Of Recommendation
+
+    #2  Video Editing/Making
+         Company   : MYKNOT Services OPC Private Limited
+         Location  : Remote (0 km)
+         Stipend   : Rs.1,500 - Rs.2,100/month
+         Duration  : 2 months
+         Education : Any
+         Skills    : adobe after effects, adobe creative suite, adobe illustrator, adobe indesign, adobe photoshop, adobe photoshop lightroom cc (+2 more)
+         Score     : 86.5/100
+         Perks     : Certificate, Flexible
+
+    #3  Graphic Design
+         Company   : Odisha Development Management Programme (ODMP)
+         Location  : Remote (0 km)
+         Stipend   : Rs.1,000 - Rs.1,000/month
+         Duration  : 2 months
+         Education : Any
+         Skills    : adobe illustrator, adobe photoshop, adobe premiere pro, canva, coreldraw, creativity (+2 more)
+         Score     : 86.5/100
+         Perks     : Certificate, Flexible, Letter Of Recommendation, 5 Days A Week
+
+    #4  Video Editing/Making
+         Company   : Subinfra Project Management Private Limited
+         Location  : Remote (0 km)
+         Stipend   : Rs.6,500 - Rs.55,000/month
+         Duration  : 6 months
+         Education : Any
+         Skills    : adobe illustrator, adobe photoshop, adobe premiere pro, canva, final cut pro, video editing (+1 more)
+         Score     : 86.5/100
+         Perks     : Certificate
+
+    #5  Graphic Design
+         Company   : Fatima Sadaf
+         Location  : Remote (0 km)
+         Stipend   : Rs.5,000 - Rs.6,000/month
+         Duration  : 3 months
+         Education : Any
+         Skills    : adobe illustrator, adobe photoshop, canva
+         Score     : 86.5/100
+         Perks     : Letter Of Recommendation, 5 Days A Week
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  [FULL (BGE-M3)] (716ms, 5 results)
+
+    #1  Graphic Design
+         Company   : CEILING IMPEX PVT LTD
+         Location  : Delhi (0 km)
+         Stipend   : Rs.5,000 - Rs.5,000/month
+         Duration  : 3 months
+         Education : Any
+         Skills    : Adobe Illustrator, Adobe Photoshop, Canva
+         Score     : 100.0/100
+         Perks     : Certificate, Letter Of Recommendation
+
+    #2  Fashion Design
+         Company   : Beyond Basics
+         Location  : Delhi (0 km)
+         Stipend   : Rs.10,000 - Rs.25,000/month
+         Duration  : 3 months
+         Education : Any
+         Skills    : Adobe Illustrator, Adobe Photoshop, Canva, CorelDRAW, Fashion Designing, Social Media Marketing
+         Score     : 74.3/100
+         Perks     : Certificate, Flexible, Letter Of Recommendation, 5 Days A Week
+
+    #3  Graphic Design
+         Company   : Mimf Media
+         Location  : Delhi (0 km)
+         Stipend   : Rs.8,000 - Rs.14,000/month
+         Duration  : 6 months
+         Education : Any
+         Skills    : Adobe Illustrator, Adobe Photoshop, Adobe Premiere Pro, Canva, CorelDRAW, Video Editing
+         Score     : 73.2/100
+         Perks     : Not Available
+
+    #4  Creative Design
+         Company   : Style Edit By Prerna
+         Location  : Delhi (0 km)
+         Stipend   : Rs.2,000 - Rs.5,000/month
+         Duration  : 6 months
+         Education : Any
+         Skills    : Adobe Photoshop, Canva, Image Editing, MS-PowerPoint, Photography
+         Score     : 72.6/100
+         Perks     : Flexible, Letter Of Recommendation
+
+    #5  Photography
+         Company   : Akash Bhatia
+         Location  : Delhi (0 km)
+         Stipend   : Rs.6,000 - Rs.10,000/month
+         Duration  : 3 months
+         Education : Any
+         Skills    : Adobe Photoshop, Adobe Photoshop Lightroom CC, Color Grading, Content Editing, Photography, Video Editing (+1 more)
+         Score     : 70.8/100
+         Perks     : Certificate, Flexible, Letter Of Recommendation
+
+
+--------------------------------------------------------------------------------
+  QUERY 8: Full Stack Developer (Remote)
+  Skills    : React, Node.js, MongoDB, Express
+  Education : B.Tech
+  City      : Remote (max 5000km)
+  Min Stipend: Rs.5,000
+--------------------------------------------------------------------------------
+
+  [LIGHTWEIGHT] (106ms, 5 results)
+
+    #1  Node.js Development
+         Company   : Tisteps Private Limited
+         Location  : Chennai (0 km)
+         Stipend   : Rs.20,000 - Rs.30,000/month
+         Duration  : 6 months
+         Education : Any
+         Skills    : express.js, html, javascript, mongodb, mysql, node.js (+2 more)
+         Score     : 123.9/100
+         Perks     : Certificate, Flexible, Letter Of Recommendation, 5 Days A Week
+
+    #2  Entry Level Software Engineer
+         Company   : Mple AI
+         Location  : Mumbai (0 km)
+         Stipend   : Rs.10,000 - Rs.15,000/month
+         Duration  : 6 months
+         Education : Any
+         Skills    : express.js, javascript, mongodb, node.js, react
+         Score     : 123.9/100
+         Perks     : Certificate, Letter Of Recommendation, Mentorship, 5 Days A Week
+
+    #3  Full Stack Development
+         Company   : Garvit B
+         Location  : Remote (0 km)
+         Stipend   : Rs.6,000 - Rs.12,000/month
+         Duration  : 6 months
+         Education : Any
+         Skills    : css, javascript, mongodb, next.js, node.js, react (+1 more)
+         Score     : 105.2/100
+         Perks     : Flexible
+
+    #4  App Developer (for Android & IOS)
+         Company   : GNZY Technologies
+         Location  : Mumbai (0 km)
+         Stipend   : Rs.5,500 - Rs.20,000/month
+         Duration  : 3 months
+         Education : Any
+         Skills    : express.js, java, javascript, kotlin, mysql, node.js (+2 more)
+         Score     : 104.7/100
+         Perks     : Certificate, Flexible, Letter Of Recommendation, 5 Days A Week
+
+    #5  Full Stack Development
+         Company   : Arachnomesh Technologies Private Limited
+         Location  : Remote (0 km)
+         Stipend   : Rs.15,001 - Rs.30,000/month
+         Duration  : 3 months
+         Education : Any
+         Skills    : css, html, javascript, mongodb, mysql, node.js (+1 more)
+         Score     : 104.7/100
+         Perks     : Certificate, Letter Of Recommendation
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  [FULL (BGE-M3)] (833ms, 5 results)
+
+    #1  Full Stack Development
+         Company   : Lane
+         Location  : Remote (0 km)
+         Stipend   : Rs.5,000 - Rs.10,000/month
+         Duration  : 2 months
+         Education : Any
+         Skills    : Express.js, MERN, MongoDB, Node.js, React
+         Score     : 100.0/100
+         Perks     : Certificate, Letter Of Recommendation
+
+    #2  Node.js Development
+         Company   : Tisteps Private Limited
+         Location  : Chennai (0 km)
+         Stipend   : Rs.20,000 - Rs.30,000/month
+         Duration  : 6 months
+         Education : Any
+         Skills    : Express.js, HTML, JavaScript, MongoDB, MySQL, Node.js (+2 more)
+         Score     : 100.0/100
+         Perks     : Certificate, Flexible, Letter Of Recommendation, 5 Days A Week
+
+    #3  Node.js Development
+         Company   : Transition Computing India
+         Location  : Remote (0 km)
+         Stipend   : Rs.8,000 - Rs.12,000/month
+         Duration  : 4 months
+         Education : Any
+         Skills    : Express.js, Firebase, JavaScript, MongoDB, Node.js, REST API
+         Score     : 100.0/100
+         Perks     : Certificate, Letter Of Recommendation, 5 Days A Week
+
+    #4  Node.js Development
+         Company   : Tisteps Private Limited
+         Location  : Chennai (0 km)
+         Stipend   : Rs.20,000 - Rs.30,000/month
+         Duration  : 6 months
+         Education : Any
+         Skills    : Express.js, HTML, JavaScript, MongoDB, MySQL, Node.js (+2 more)
+         Score     : 100.0/100
+         Perks     : Certificate, Flexible, Letter Of Recommendation, 5 Days A Week
+
+    #5  Node.js Development
+         Company   : Tisteps Private Limited
+         Location  : Chennai (0 km)
+         Stipend   : Rs.20,000 - Rs.30,000/month
+         Duration  : 6 months
+         Education : Any
+         Skills    : Express.js, HTML, JavaScript, MongoDB, MySQL, Node.js (+2 more)
+         Score     : 100.0/100
+         Perks     : Certificate, Flexible, Letter Of Recommendation, 5 Days A Week
+
+
+--------------------------------------------------------------------------------
+  QUERY 9: Finance / Accounting Intern (Mumbai)
+  Skills    : Excel, Tally, Accounting
+  Education : B.Com
+  City      : Mumbai (max 50km)
+  Min Stipend: Rs.0
+--------------------------------------------------------------------------------
+
+  [LIGHTWEIGHT] (42ms, 5 results)
+
+    #1  Accounting & Taxation
+         Company   : ATMS Co & LLP
+         Location  : Thane (0 km)
+         Stipend   : Rs.6,000 - Rs.6,000/month
+         Duration  : 6 months
+         Education : Any
+         Skills    : accounting, advanced excel, tally, taxation
+         Score     : 86.5/100
+         Perks     : Certificate
+
+    #2  Finance Commercial - Trainee
+         Company   : BookMyShow
+         Location  : Mumbai (0 km)
+         Stipend   : Rs.12,499 - Rs.12,500/month
+         Duration  : 6 months
+         Education : Any
+         Skills    : accounting, english proficiency (spoken), english proficiency (written), financial modeling, ms-excel, tally
+         Score     : 86.5/100
+         Perks     : Certificate, Flexible
+
+    #3  Accounting & Tally
+         Company   : Evavo Wellness & Solutions LLP
+         Location  : Mumbai (0 km)
+         Stipend   : Rs.8,000 - Rs.15,000/month
+         Duration  : 6 months
+         Education : Any
+         Skills    : ms-excel, tally
+         Score     : 76.0/100
+         Perks     : Certificate, Letter Of Recommendation
+
+    #4  Accounting & Bookkeeping
+         Company   : Way2Society
+         Location  : Mumbai (0 km)
+         Stipend   : Rs.8,000 - Rs.10,000/month
+         Duration  : 4 months
+         Education : Any
+         Skills    : accounting, tally
+         Score     : 61.0/100
+         Perks     : Certificate, Letter Of Recommendation
+
+    #5  Telecalling
+         Company   : Cars24 Services Private Limited
+         Location  : Mumbai (0 km)
+         Stipend   : Rs.10,000 - Rs.15,000/month
+         Duration  : 6 months
+         Education : Any
+         Skills    : client relationship, cold calling, coordination, inside sales, marathi proficiency(spoken), ms-excel (+2 more)
+         Score     : 35.5/100
+         Perks     : Certificate
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  [FULL (BGE-M3)] (699ms, 5 results)
+
+    #1  Accounting & Tally
+         Company   : Evavo Wellness & Solutions LLP
+         Location  : Mumbai (0 km)
+         Stipend   : Rs.8,000 - Rs.15,000/month
+         Duration  : 6 months
+         Education : Any
+         Skills    : MS-Excel, Tally
+         Score     : 100.0/100
+         Perks     : Certificate, Letter Of Recommendation
+
+    #2  Accounting & Taxation
+         Company   : A R C K & Co.
+         Location  : Mumbai (0 km)
+         Stipend   : Rs.5,000 - Rs.7,000/month
+         Duration  : 6 months
+         Education : Any
+         Skills    : Accounting, Effective Communication, MS-Excel, Tally
+         Score     : 100.0/100
+         Perks     : Certificate
+
+    #3  Finance & Accounting
+         Company   : The Souled Store
+         Location  : Mumbai (0 km)
+         Stipend   : Rs.10,000 - Rs.10,001/month
+         Duration  : 6 months
+         Education : Any
+         Skills    : Accounting, Coordination, Effective Communication, Interpersonal skills, MS-Excel, Tally
+         Score     : 100.0/100
+         Perks     : Certificate, Letter Of Recommendation, 5 Days A Week
+
+    #4  Finance
+         Company   : Talent Corner HR Services
+         Location  : Mumbai (0 km)
+         Stipend   : Rs.15,000 - Rs.15,000/month
+         Duration  : 3 months
+         Education : Any
+         Skills    : Accounting, Financial Modeling, MS-Excel, MS-Office, Tally
+         Score     : 100.0/100
+         Perks     : Certificate, Letter Of Recommendation
+
+    #5  Accounts
+         Company   : A.A.Diamond
+         Location  : Mumbai (0 km)
+         Stipend   : Rs.10,000 - Rs.15,000/month
+         Duration  : 2 months
+         Education : Any
+         Skills    : MS-Excel, Tally
+         Score     : 74.1/100
+         Perks     : Not Available
+
+
+--------------------------------------------------------------------------------
+  QUERY 10: Cybersecurity Intern (Hyderabad)
+  Skills    : Network Security, Linux, Python
+  Education : B.Tech
+  City      : Hyderabad (max 100km)
+  Min Stipend: Rs.0
+--------------------------------------------------------------------------------
+
+  [LIGHTWEIGHT] (37ms, 5 results)
+
+    #1  Data Science
+         Company   : Emoolar Technology Private Limited
+         Location  : Remote (0 km)
+         Stipend   : Rs.5,000 - Rs.10,000/month
+         Duration  : 3 months
+         Education : Any
+         Skills    : artificial intelligence, cnn (convolutional neural network), data science, llm evaluation, natural language processing (nlp), python
+         Score     : 85.0/100
+         Perks     : Certificate, Flexible, Letter Of Recommendation, 5 Days A Week
+
+    #2  Python Development
+         Company   : EvoNexis
+         Location  : Remote (0 km)
+         Stipend   : Rs.10,000 - Rs.20,000/month
+         Duration  : 3 months
+         Education : Any
+         Skills    : css, django, flask, html, python, rest api
+         Score     : 67.1/100
+         Perks     : Certificate, Flexible, Letter Of Recommendation, 5 Days A Week
+
+    #3  Python Development
+         Company   : Optimasys
+         Location  : Remote (0 km)
+         Stipend   : Rs.15,000 - Rs.25,000/month
+         Duration  : 3 months
+         Education : Any
+         Skills    : css, django, flask, html, python, rest api
+         Score     : 67.1/100
+         Perks     : Certificate, Flexible, Letter Of Recommendation, 5 Days A Week
+
+    #4  Backend Development
+         Company   : Whatbytes
+         Location  : Remote (0 km)
+         Stipend   : Rs.10,000 - Rs.20,000/month
+         Duration  : 6 months
+         Education : Any
+         Skills    : data structures, django, postgresql, python, rest api
+         Score     : 67.1/100
+         Perks     : Certificate, Flexible, Letter Of Recommendation
+
+    #5  Recommendation Systems Engineer (Backend/ML)
+         Company   : Nutrachoco
+         Location  : Remote (0 km)
+         Stipend   : Rs.13,000 - Rs.15,000/month
+         Duration  : 3 months
+         Education : Any
+         Skills    : apache kafka, fastapi, langchain, mongodb, postgresql, python (+2 more)
+         Score     : 66.7/100
+         Perks     : Certificate, Flexible, Letter Of Recommendation, 5 Days A Week
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+  [FULL (BGE-M3)] (596ms, 5 results)
+
+    #1  Bioinformatics
+         Company   : Bayes Labs
+         Location  : Hyderabad (0 km)
+         Stipend   : Rs.15,000 - Rs.20,000/month
+         Duration  : 6 months
+         Education : Any
+         Skills    : Bioinformatics, Python
+         Score     : 100.0/100
+         Perks     : Certificate, Flexible, Mentorship, 5 Days A Week
+
+    #2  Embedded Systems
+         Company   : Quanint Techsoft Private Limited
+         Location  : Hyderabad (0 km)
+         Stipend   : Rs.15,000 - Rs.18,000/month
+         Duration  : 3 months
+         Education : Any
+         Skills    : Arduino, ARM Microcontroller, Circuit Design, EAGLE, Embedded Systems, Internet of Things (IoT) (+2 more)
+         Score     : 100.0/100
+         Perks     : Certificate, Flexible, Letter Of Recommendation, 5 Days A Week
+
+    #3  Cyber Security
+         Company   : NDFM Business World Pvt. Ltd.
+         Location  : Remote (0 km)
+         Stipend   : Rs.1,000 - Rs.2,000/month
+         Duration  : 1 months
+         Education : Diploma
+         Skills    : Computer Networking, Linux, Python, Spring Boot, Web Application Security
+         Score     : 100.0/100
+         Perks     : Certificate, Flexible, Letter Of Recommendation
+
+    #4  Subject Matter Expert  (Network Security)
+         Company   : Kaushal Ranjeet Private Limited
+         Location  : Remote (0 km)
+         Stipend   : Rs.9,000 - Rs.12,000/month
+         Duration  : 6 months
+         Education : Any
+         Skills    : Accounting Software, Burp Suite, Kali Linux, Metasploit, Nessus, Nmap (+2 more)
+         Score     : 90.4/100
+         Perks     : Certificate, Flexible
+
+    #5  Electronics Engineering
+         Company   : Quanint Techsoft Private Limited
+         Location  : Hyderabad (0 km)
+         Stipend   : Rs.12,000 - Rs.18,000/month
+         Duration  : 6 months
+         Education : Any
+         Skills    : Arduino, ARM Microcontroller, C++ Programming, Circuit Design, C Programming, Embedded Systems (+2 more)
+         Score     : 88.4/100
+         Perks     : Certificate, Flexible, Letter Of Recommendation, 5 Days A Week
+
+
+================================================================================
+  END OF REPORT
+================================================================================
